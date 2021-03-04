@@ -13,7 +13,14 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(private cocktailsservice: CocktailsService) { }
 
   ngOnInit(): void {
-    this.cocktailsservice.getCocktail('Gin').subscribe((data: any) => {
+  }
+
+  searchCocktail(drink: string) {
+    this.cocktailsservice.getCocktail(drink).subscribe((data: any) => {
+      this.setCocktail(data);
+    });
+  }
+  setCocktail(data: any) {
       this.cocktails = data.drinks.map((drink: any) => {
         return {
           name: drink.strDrink,
@@ -23,6 +30,5 @@ export class SearchCriteriaComponent implements OnInit {
         }
       });
       console.log(this.cocktails);
-    })
   }
   }

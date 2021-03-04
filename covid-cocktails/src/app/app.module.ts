@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { FormsModule } from '@angular/forms';
+import { PopularListComponent } from './popular-list/popular-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchCriteriaComponent
+    SearchCriteriaComponent,
+    PopularListComponent
   ],
   imports: [
     BrowserModule,

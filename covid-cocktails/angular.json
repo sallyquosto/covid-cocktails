@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "covid-cocktails"
+  "defaultProject": "covid-cocktails",
+  "cli": {
+    "analytics": "1f0e3133-8a19-4ca2-9a98-bd163414768f"
+  }
 }

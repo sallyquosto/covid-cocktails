@@ -1,1 +1,10 @@
 <p>search-criteria works!</p>
+
+<input type="text" #drink />
+<button (click)="searchCocktail(drink.value)">Submit</button>
+    <div *ngFor="let cocktail of cocktails">
+        <div>Drink Name: {{cocktail.name}}</div>
+        <div>Category: {{cocktail.category}}</div>
+        <div>Alcoholic: {{cocktail.alcoholic}}</div>
+        <div>Instructions: {{cocktail.instructions}}</div>
+    </div>

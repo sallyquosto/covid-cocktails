@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
+import { PopularListComponent } from './popular-list/popular-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchCriteriaComponent
+    SearchCriteriaComponent,
+    PopularListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-export interface Cocktails {
+export interface Cocktail {
     name: string;
     category: string;
     alcoholic: string;

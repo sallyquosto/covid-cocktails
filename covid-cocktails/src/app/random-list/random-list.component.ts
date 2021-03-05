@@ -9,7 +9,7 @@ import { Cocktail } from '../models/cocktail';
 })
 export class RandomListComponent implements OnInit {
 cocktails: Cocktail[] = []
-
+// subscribes to cocktail service to return drinks on html
   constructor(private cocktailservice: CocktailsService) { }
 
   ngOnInit(): void {
@@ -35,10 +35,11 @@ cocktails: Cocktail[] = []
           ingredient5: drink.strIngredient5,
           ingredient6: drink.strIngredient6,
           ingredient7: drink.strIngredient7,
-          ingredient8: drink.strIngredient8
+          ingredient8: drink.strIngredient8 
+          /*Items listed above are how they appear from postman to render; strDrink, strInstructions*/
         }
       });
-      console.log(this.cocktails);
+      /*console.log(this.cocktails);*/
     })
   }
 

@@ -3,20 +3,20 @@ export interface Cocktail {
     category: string;
     alcoholic: string;
     instructions: string;
-    measure1: null;
+    measure1: any;
     ingredient1: string;
-    measure2: null;
+    measure2: any;
     ingredient2: string;
-    measure3: null;
+    measure3: any;
     ingredient3: string;
-    measure4: null;
+    measure4: any;
     ingredient4: string;
-    measure5: null;
+    measure5: any;
     ingredient5: string;
-    measure6: null;
+    measure6: any;
     ingredient6: string;
-    measure7: null;
+    measure7: any;
     ingredient7: string;
-    measure8: null;
+    measure8: any;
     ingredient8: string;
 }

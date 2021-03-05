@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CocktailsService } from '../cocktails.service';
 import { Cocktail } from '../models/cocktail';
 
@@ -8,27 +9,31 @@ import { Cocktail } from '../models/cocktail';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
-  cocktails: Cocktail[] = []
 
-  constructor(private cocktailsservice: CocktailsService) { }
+
+  constructor(
+    private cocktailsservice: CocktailsService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
   }
-
   searchCocktail(drink: string) {
     this.cocktailsservice.getCocktail(drink).subscribe((data: any) => {
       this.setCocktail(data);
+      this.router.navigateByUrl('/cocktail-list');
     });
   }
+
   setCocktail(data: any) {
-      this.cocktails = data.drinks.map((drink: any) => {
-        return {
-          name: drink.strDrink,
-          category: drink.strCategory,
-          alcoholic: drink.strAlcoholic,
-          instructions: drink.strInstructions
-        }
-      });
-      console.log(this.cocktails);
-  }
+    this.cocktailsservice.cocktails = data.drinks.map((drink: any) => {
+      return {
+        name: drink.strDrink,
+        category: drink.strCategory,
+        alcoholic: drink.strAlcoholic,
+        instructions: drink.strInstructions
+      }
+    });
+}
+
   }

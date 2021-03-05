@@ -20,7 +20,11 @@ export class SearchCriteriaComponent implements OnInit {
           category: drink.strCategory,
           alcoholic: drink.strAlcoholic,
           instructions: drink.strInstructions
+          
         }
+
+        
+
       });
       console.log(this.cocktails);
     })

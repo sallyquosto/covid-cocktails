@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
+import { RandomListComponent } from './random-list/random-list.component';
 import { FormsModule } from '@angular/forms';
 import { PopularListComponent } from './popular-list/popular-list.component';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
@@ -16,6 +17,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
+    RandomListComponent
     PopularListComponent,
     CocktailListComponent,
     HeaderComponent,

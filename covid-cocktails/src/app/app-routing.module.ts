@@ -14,3 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+/*Compare code to GitHub before deletion for merge purposes*/

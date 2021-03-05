@@ -9,6 +9,7 @@ import { Cocktail } from './models/cocktail';
 export class CocktailsService {
   cocktails: Cocktail[] = [];
   apiURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=';
+  randomURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/random.php';
   popularURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/popular.php'
   drinks: any;
 
@@ -18,6 +19,9 @@ export class CocktailsService {
     return this.http.get(`${this.apiURL}${strDrink}`)
   }
 
+  getRandom = (): any => {
+    return this.http.get(this.randomURL)
+  }
   getPopular = (): any => {
     return this.http.get(this.popularURL)
   }

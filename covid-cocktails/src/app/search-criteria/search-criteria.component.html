@@ -1,1 +1,18 @@
-<p>search-criteria works!</p>
+<form>
+    <select name="ingredients" id="ingredients">
+        <option value="" selected disabled hidden>Ingredients</option>
+        <option *ngFor = "let i of ingredient" [value] = "i.strIngredient1" >{{ i.strIngredient1 }}</option></select>
+    <select name="glass" id="glass">
+        <option value="" selected disabled hidden>Glass Type</option>
+        <option *ngFor = "let g of glass" [value] = "g.name" >{{g.strGlass}}</option></select>
+    
+    <select name="alcoholic" id="alcoholic">
+        <option value="" selected disabled hidden>Alcoholic/Non-Alcholic</option>
+        <option *ngFor = "let a of alcoholic" [value] = "a.name" >{{a.strAlcoholic}}</option></select>
+        <button>Search</button>
+</form>
+
+<!-- <div class="filterResults" *ngFor="let cocktail of cocktails; index as i">
+    {{cocktail.name}}
+    
+</div> -->

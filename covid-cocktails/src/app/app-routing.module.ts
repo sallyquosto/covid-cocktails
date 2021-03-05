@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RandomListComponent } from './random-list/random-list.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { PopularListComponent } from './popular-list/popular-list.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 
 const routes: Routes = [
-  {path: 'search-criteria', component: SearchCriteriaComponent},
-  {path: 'random-list', component: RandomListComponent}
+  {path:'', component: SearchCriteriaComponent},
+  {path:'cocktail-list', component: CocktailListComponent},
+  {path: 'popular-list', component: PopularListComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

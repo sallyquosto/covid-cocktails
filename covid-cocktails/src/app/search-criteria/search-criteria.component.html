@@ -1,9 +1,20 @@
 <p>search-criteria works!</p>
 
-<nav>
+<input type="text" #drink />
+<button (click)="searchCocktail(drink.value)">Submit</button>
 
-    <a routerLink="/search-criteria" routerLinkActive="active">Search</a><br>
-    <a routerLink="/random-list" routerLinkActive="active">Choose a Random</a>
+<form>
+    <select name="ingredients" id="ingredients">
+        <option value="" selected disabled hidden>Ingredients</option>
+        <option *ngFor = "let i of ingredient" [value] = "i.strIngredient1" >{{ i.strIngredient1 }}</option></select>
+    <select name="glass" id="glass">
+        <option value="" selected disabled hidden>Glass Type</option>
+        <option *ngFor = "let g of glass" [value] = "g.name" >{{g.strGlass}}</option></select>
     
-</nav>
-<!--Remove this when finished for merge purposes-->
+    <select name="alcoholic" id="alcoholic">
+        <option value="" selected disabled hidden>Alcoholic/Non-Alcholic</option>
+        <option *ngFor = "let a of alcoholic" [value] = "a.name" >{{a.strAlcoholic}}</option></select>
+        <button>Search</button>
+</form>
+
+<app-popular-list></app-popular-list>

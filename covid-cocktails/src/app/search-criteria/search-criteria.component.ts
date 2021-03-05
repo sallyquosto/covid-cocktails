@@ -8,8 +8,16 @@ import { Cocktail } from '../models/cocktail';
   templateUrl: './search-criteria.component.html',
   styleUrls: ['./search-criteria.component.css']
 })
-export class SearchCriteriaComponent implements OnInit {
 
+export class SearchCriteriaComponent implements OnInit {
+  cocktails: Cocktail[] = []
+  ingredient: any
+  glass: any;
+  alcoholic: any;
+  drinks: any;
+  ingredientSelected: any;
+  glassSelected: any;
+  alcoholicSelected: any;
 
   constructor(
     private cocktailsservice: CocktailsService,
@@ -17,6 +25,20 @@ export class SearchCriteriaComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+
+    this.cocktailsservice.getIngredients().subscribe((response: any) => {
+      this.ingredient = response['drinks'];
+      // console.log(this.ingredient);
+    });
+    
+    this.cocktailsservice.getGlasses().subscribe((response: any) => {
+      this.glass = response['drinks'];
+    });
+    
+    this.cocktailsservice.getAlcoholic().subscribe((response: any) => {
+      this.alcoholic = response['drinks'];
+    });
+    
   }
   searchCocktail(drink: string) {
     this.cocktailsservice.getCocktail(drink).subscribe((data: any) => {
@@ -35,5 +57,7 @@ export class SearchCriteriaComponent implements OnInit {
       }
     });
 }
+
+
 
   }

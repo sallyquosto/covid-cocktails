@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router} from '@angular/router';
 import { Cocktail } from '../models/cocktail';
 
 @Component({
@@ -10,16 +10,29 @@ import { Cocktail } from '../models/cocktail';
 })
 export class CocktailListComponent implements OnInit {
 
+
   get cocktails(): Cocktail[] {
     return this.cocktailsservice.cocktails;
   }
 
+  selectedCocktail?: Cocktail;
+
   constructor(
-    private route: ActivatedRoute,
+    private router: Router,
     private cocktailsservice: CocktailsService
     ) { }
 
+
+
   ngOnInit(): void {
+    
   }
 
+  navHome() {
+    this.router.navigate(['/']);
+  }
+  // function that allows the selected drink information to generate as a details popup with correct drink information
+  onSelect(cocktail: Cocktail) {
+    this.selectedCocktail = cocktail;
+  }
 }

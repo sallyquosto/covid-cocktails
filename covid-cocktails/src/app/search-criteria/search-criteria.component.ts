@@ -50,10 +50,12 @@ export class SearchCriteriaComponent implements OnInit {
   setCocktail(data: any) {
     this.cocktailsservice.cocktails = data.drinks.map((drink: any) => {
       return {
+        id: drink.idDrink,
         name: drink.strDrink,
         category: drink.strCategory,
         alcoholic: drink.strAlcoholic,
-        instructions: drink.strInstructions
+        instructions: drink.strInstructions,
+        image: drink.strDrinkThumb
       }
     });
 }

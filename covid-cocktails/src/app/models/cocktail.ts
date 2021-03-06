@@ -4,7 +4,6 @@ export interface Cocktail {
     category: string;
     alcoholic: string;
     instructions: string;
-<<<<<<< HEAD
     measure1: any;
     ingredient1: string;
     measure2: any;
@@ -21,7 +20,5 @@ export interface Cocktail {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
-=======
     image: string
->>>>>>> detailslist
 }

@@ -11,6 +11,7 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     CocktailListComponent,
     HeaderComponent,
     FooterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CocktailDetailsComponent
   ],
   imports: [
     AppRoutingModule,

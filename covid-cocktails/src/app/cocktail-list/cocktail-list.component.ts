@@ -31,7 +31,7 @@ export class CocktailListComponent implements OnInit {
   navHome() {
     this.router.navigate(['/']);
   }
-
+  // function that allows the selected drink information to generate as a details popup with correct drink information
   onSelect(cocktail: Cocktail) {
     this.selectedCocktail = cocktail;
   }

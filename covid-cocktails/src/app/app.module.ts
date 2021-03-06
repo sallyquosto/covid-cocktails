@@ -18,7 +18,7 @@ import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.co
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
-    RandomListComponent
+    RandomListComponent,
     PopularListComponent,
     CocktailListComponent,
     HeaderComponent,

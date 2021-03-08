@@ -10,15 +10,15 @@ import { Location } from '@angular/common';
   styleUrls: ['./random-list.component.css']
 })
 export class RandomListComponent implements OnInit {
-cocktails: Cocktail[] = []
+  cocktails: Cocktail[] = []
 
-// subscribes to cocktail service to return drinks on html
+  // subscribes to cocktail service to return drinks on html
   constructor(
     private cocktailservice: CocktailsService,
-    public router: Router,
-    ) { }
+    public router: Router
+  ) { }
 
- 
+
 
   ngOnInit(): void {
     this.cocktailservice.getRandom().subscribe((data: any) => {
@@ -36,6 +36,13 @@ cocktails: Cocktail[] = []
           measure6: drink.strMeasure6,
           measure7: drink.strMeasure7,
           measure8: drink.strMeasure8,
+          measure9: drink.strMeasure9,
+          measure10: drink.strMeasure10,
+          measure11: drink.strMeasure11,
+          measure12: drink.strMeasure12,
+          measure13: drink.strMeasure13,
+          measure14: drink.strMeasure14,
+          measure15: drink.strMeasure15,
           ingredient1: drink.strIngredient1,
           ingredient2: drink.strIngredient2,
           ingredient3: drink.strIngredient3,
@@ -43,7 +50,15 @@ cocktails: Cocktail[] = []
           ingredient5: drink.strIngredient5,
           ingredient6: drink.strIngredient6,
           ingredient7: drink.strIngredient7,
-          ingredient8: drink.strIngredient8 
+          ingredient8: drink.strIngredient8,
+          ingredient9: drink.strIngredient9,
+          ingredient10: drink.strIngredient10,
+          ingredient11: drink.strIngredient11,
+          ingredient12: drink.strIngredient12,
+          ingredient13: drink.strIngredient13,
+          ingredient14: drink.strIngredient14,
+          ingredient15: drink.strIngredient15
+
           /*Items listed above are how they appear from postman to render; strDrink, strInstructions*/
         }
       });
@@ -54,4 +69,3 @@ cocktails: Cocktail[] = []
 }
 
 
- 

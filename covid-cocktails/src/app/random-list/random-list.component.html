@@ -14,7 +14,7 @@
         <div><strong>Alcohol Content:</strong> {{cocktail.alcoholic}}</div>
         <div><strong>Instructions:</strong> {{cocktail.instructions}}</div>
         <div class="intel">
-            <!-- the ngIf directive hides the element if it is null -->
+            <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
             <div *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
             <div *ngIf="cocktail.measure2"> {{cocktail.measure2}} of {{cocktail.ingredient2}}</div>
             <div *ngIf="cocktail.measure3"> {{cocktail.measure3}} of {{cocktail.ingredient3}}</div>

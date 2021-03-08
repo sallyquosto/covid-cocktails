@@ -20,7 +20,8 @@ export class PopularListComponent implements OnInit {
           name: drink.strDrink,
           category: drink.strCategory,
           alcoholic: drink.strAlcoholic,
-          instructions: drink.strInstructions
+          instructions: drink.strInstructions,
+          image: drink.strDrinkThumb
         }
       });
       console.log(this.cocktails);

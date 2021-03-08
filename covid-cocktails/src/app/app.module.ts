@@ -12,12 +12,13 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
-    RandomListComponent
+    RandomListComponent,
     PopularListComponent,
     CocktailListComponent,
     HeaderComponent,
@@ -33,4 +34,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+  constructor(router: Router){}
+  
+}
+

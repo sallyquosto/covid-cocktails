@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
 import { Cocktail } from '../models/cocktail';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-random-list',
@@ -9,8 +11,14 @@ import { Cocktail } from '../models/cocktail';
 })
 export class RandomListComponent implements OnInit {
 cocktails: Cocktail[] = []
+
 // subscribes to cocktail service to return drinks on html
-  constructor(private cocktailservice: CocktailsService) { }
+  constructor(
+    private cocktailservice: CocktailsService,
+    public router: Router,
+    ) { }
+
+ 
 
   ngOnInit(): void {
     this.cocktailservice.getRandom().subscribe((data: any) => {
@@ -44,3 +52,6 @@ cocktails: Cocktail[] = []
   }
 
 }
+
+
+ 

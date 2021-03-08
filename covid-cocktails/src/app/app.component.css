@@ -1,0 +1,11 @@
+.cocktail-header{
+    display: flex;
+    margin: 0px;
+    padding: 0px;;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}

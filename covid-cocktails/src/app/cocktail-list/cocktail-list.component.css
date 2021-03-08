@@ -2,3 +2,22 @@ img {
     height: 100px;
     width: 100px;
 }
+
+.cocktail-list{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    width: auto; 
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.cocktail-image{
+    height:250px;
+    width:200px;
+    margin: 15px;
+    position: relative;
+}

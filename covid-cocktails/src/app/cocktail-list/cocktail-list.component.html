@@ -1,8 +1,11 @@
 <button (click)="navHome()">Return to Home</button>
-<div *ngFor="let cocktail of cocktails">
-    <div>Drink Name: {{cocktail.name}}</div>
-    <img src="{{cocktail.image}}" (click)="onSelect(cocktail)">
+<div class="cocktail-list">
+    <div *ngFor="let cocktail of cocktails">
+        <div>Drink Name: {{cocktail.name}}</div>
+        <img class="cocktail-image" src="{{cocktail.image}}" (click)="onSelect(cocktail)">
+    </div>
 </div>
+
 <div class="popup-wrapper" *ngIf="selectedCocktail">
     <h2>{{selectedCocktail.name}} Details</h2>
     <div>

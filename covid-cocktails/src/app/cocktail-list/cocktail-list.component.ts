@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
 import { Router} from '@angular/router';
 import { Cocktail } from '../models/cocktail';
@@ -15,7 +15,7 @@ export class CocktailListComponent implements OnInit {
     return this.cocktailsservice.cocktails;
   }
 
-  selectedCocktail?: Cocktail;
+  selectedCocktail?: any;
 
   constructor(
     private router: Router,
@@ -27,12 +27,16 @@ export class CocktailListComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+  // router to nagivate you to the homepage
   navHome() {
     this.router.navigate(['/']);
   }
   // function that allows the selected drink information to generate as a details popup with correct drink information
-  onSelect(cocktail: Cocktail) {
+  onSelect(cocktail: any) {
     this.selectedCocktail = cocktail;
+  }
+
+  closePopup() {
+    this.selectedCocktail = null;
   }
 }

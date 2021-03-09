@@ -4,10 +4,13 @@ import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.co
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { PopularListComponent } from './popular-list/popular-list.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
+import { RandomListComponent } from './random-list/random-list.component';
 
 const routes: Routes = [
   {path: 'home', component: SearchCriteriaComponent},
   {path:'cocktail-list', component: CocktailListComponent},
+  {path: 'popular-list', component: PopularListComponent},
+  {path:'random-list', component: RandomListComponent},
   {path: 'cocktail-details', component: CocktailDetailsComponent},
   {path: 'popular-list', component: PopularListComponent},
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -17,4 +20,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-/*Compare code to GitHub before deletion for merge purposes*/

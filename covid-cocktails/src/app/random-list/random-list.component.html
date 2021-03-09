@@ -1,21 +1,30 @@
-<h1>Random List of the Best Drinks</h1>
-<!-- ngFor renders a template for each item in our collection from our interface-->
-<div *ngFor='let cocktail of cocktails' class="menu">
+<br>
+<br>
+<br>
+<div class="rand-1">
+    <a routerLink='/random-list' routerLinkActive="active">Randomize it</a>
+    and pick another choice...
+</div>
+<div class="menu-a">
+    <!-- ngFor renders a template for each item in our collection from our interface-->
+    <div *ngFor='let cocktail of cocktails' class="menu">
 
-    <div><strong>Your random choice:</strong> {{cocktail.name}}</div>
-    <div><strong>Category:</strong> {{cocktail.category}}</div>
-    <div><strong>Alcohol Content:</strong> {{cocktail.alcoholic}}</div>
-    <div><strong>Instructions:</strong> {{cocktail.instructions}}</div>
-    <div class="intel"> 
-        <!-- the ngIf directive hides the element if it is null -->
-        <div *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
-        <div *ngIf="cocktail.measure2"> {{cocktail.measure2}} of {{cocktail.ingredient2}}</div>
-        <div *ngIf="cocktail.measure3"> {{cocktail.measure3}} of {{cocktail.ingredient3}}</div>
-        <div *ngIf="cocktail.measure4"> {{cocktail.measure4}} of {{cocktail.ingredient4}}</div>
-        <div *ngIf="cocktail.measure5"> {{cocktail.measure5}} of {{cocktail.ingredient5}}</div>
-        <div *ngIf="cocktail.measure6"> {{cocktail.measure6}} of {{cocktail.ingredient6}}</div>
-        <div *ngIf="cocktail.measure7"> {{cocktail.measure7}} of {{cocktail.ingredient7}}</div>
-        <div *ngIf="cocktail.measure8"> {{cocktail.measure8}} of {{cocktail.ingredient8}}</div>
+        <div><strong>Your random choice:</strong> {{cocktail.name}}</div>
+        <div><strong>Category:</strong> {{cocktail.category}}</div>
+        <div><strong>Alcohol Content:</strong> {{cocktail.alcoholic}}</div>
+        <div><strong>Instructions:</strong> {{cocktail.instructions}}</div>
+        <div class="intel">
+            <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
+            <div *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
+            <div *ngIf="cocktail.measure2"> {{cocktail.measure2}} of {{cocktail.ingredient2}}</div>
+            <div *ngIf="cocktail.measure3"> {{cocktail.measure3}} of {{cocktail.ingredient3}}</div>
+            <div *ngIf="cocktail.measure4"> {{cocktail.measure4}} of {{cocktail.ingredient4}}</div>
+            <div *ngIf="cocktail.measure5"> {{cocktail.measure5}} of {{cocktail.ingredient5}}</div>
+            <div *ngIf="cocktail.measure6"> {{cocktail.measure6}} of {{cocktail.ingredient6}}</div>
+            <div *ngIf="cocktail.measure7"> {{cocktail.measure7}} of {{cocktail.ingredient7}}</div>
+            <div *ngIf="cocktail.measure8"> {{cocktail.measure8}} of {{cocktail.ingredient8}}</div>
+        </div>
+
     </div>
 
 </div>

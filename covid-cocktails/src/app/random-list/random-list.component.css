@@ -1,8 +1,11 @@
 .menu {
-    background: #bac94a;
+    background: #6C8CBF;
     width: auto;
     /* text-align: left; */
     padding: 15px;
+    border-radius: 2px;
+    height: 400px;
+    font-size: 20px;
 }
 
 .intel {
@@ -11,4 +14,19 @@ flex-direction: column;
 text-align: center;
 padding: 10px;
 font-weight: bold;
+font-size: 20px;
+}
+
+a {
+    background-color: #E2D36B;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.rand-1 {
+    margin-bottom: 5px;
 }

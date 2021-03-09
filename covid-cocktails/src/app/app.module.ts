@@ -12,6 +12,7 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { Router } from '@angular/router';
 import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -37,4 +38,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+  constructor(router: Router){}
+  
+}
+

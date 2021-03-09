@@ -3,18 +3,44 @@
 <input type="text" #drink />
 <button (click)="searchCocktail(drink.value)">Submit</button>
 
-<form>
-    <select name="ingredients" id="ingredients">
-        <option value="" selected disabled hidden>Ingredients</option>
-        <option *ngFor = "let i of ingredient" [value] = "i.strIngredient1" >{{ i.strIngredient1 }}</option></select>
-    <select name="glass" id="glass">
-        <option value="" selected disabled hidden>Glass Type</option>
-        <option *ngFor = "let g of glass" [value] = "g.name" >{{g.strGlass}}</option></select>
-    
-    <select name="alcoholic" id="alcoholic">
-        <option value="" selected disabled hidden>Alcoholic/Non-Alcholic</option>
-        <option *ngFor = "let a of alcoholic" [value] = "a.name" >{{a.strAlcoholic}}</option></select>
-        <button>Search</button>
+<div class="ingredient">
+  <form
+    #ingredientForm="ngForm"
+    (submit)="searchByIngredients(ingredientForm.value)"
+  >
+    <label for="ingredient">Search by Ingredients</label>
+    <select name="ingredient" id="ingredient" ngModel #ingredients>
+      <option value="" selected disabled hidden>Ingredients</option>
+      <option *ngFor="let i of ingredient" [value]="i.strIngredient1">
+        {{ i.strIngredient1 }}
+      </option>
+    </select>
+    <button>Submit</button>
+  </form>
+</div>
+<form #glassForm="ngForm" (submit)="searchByGlass(glassForm.value)">
+  <label for="glass">Search by glass type</label>
+  <select name="glass" id="glass" ngModel>
+    <option value="" selected disabled hidden>Glass Type</option>
+    <option *ngFor="let g of glass" [value]="g.strGlass">
+      {{ g.strGlass }}
+    </option>
+  </select>
+  <button>Submit</button>
 </form>
+<div class="alcoholic">
+  <form
+    #alcoholicForm="ngForm"
+    (submit)="searchByAlcoholic(alcoholicForm.value)">
+    <label for="alcoholic">Alcoholic or Non-alcoholic?</label>
+    <select name="alcoholic" id="alcoholic" ngModel>
+      <option value="" selected disabled hidden>Alcoholic/Non-Alcholic</option>
+      <option *ngFor="let a of alcoholic" [value]="a.strAlcoholic">
+        {{ a.strAlcoholic }}
+      </option>
+    </select>
+    <button>Submit</button>
+  </form>
+</div>
 
 <app-popular-list></app-popular-list>

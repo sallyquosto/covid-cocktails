@@ -4,7 +4,6 @@ export interface Cocktail {
     category: string;
     alcoholic: string;
     instructions: string;
-<<<<<<< HEAD
     measure1: any;
     ingredient1: string;
     measure2: any;
@@ -21,24 +20,21 @@ export interface Cocktail {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
-    image: string
-=======
-    ingredient1: string;
-    ingredient2: string;
-    ingredient3: string;
-    ingredient4: string;
-    ingredient5: string;
-    ingredient6: string;
-    ingredient7: string;
-    ingredient8: string;
-    ingredient9: string;
-    ingredient10: string;
-    ingredient11: string;
-    ingredient12: string;
-    ingredient13: string;
-    ingredient14: string;
-    ingredient15: string;
+    measure9: string;
+    ingredient9: string
+    measure10: string;
+    ingredient10: string
+    measure11: string;
+    ingredient11: string
+    measure12: string;
+    ingredient12: string
+    measure13: string;
+    ingredient13: string
+    measure14: string;
+    ingredient14: string
+    measure15: string;
+    ingredient15: string
     glass: string;
+    image: string
 
->>>>>>> as-filtersearch
 }

@@ -1,8 +1,32 @@
-<p>cocktail-list works!</p>
-
-<div *ngFor="let cocktail of cocktails">
-    <div>Drink Name: {{cocktail.name}}</div>
-    <div>Category: {{cocktail.category}}</div>
-    <div>Alcoholic: {{cocktail.alcoholic}}</div>
-    <div>Instructions: {{cocktail.instructions}}</div>
+<button (click)="navHome()">Return to Home</button>
+<div class="cocktail-list">
+    <div *ngFor="let cocktail of cocktails">
+        <div>Drink Name: {{cocktail.name}}</div>
+        <img class="cocktail-image" src="{{cocktail.image}}" (click)="onSelect(cocktail)">
+    </div>
+</div>
+<div *ngIf="selectedCocktail">
+    <div class="popup-overlay">
+        <h2>{{selectedCocktail.name}} Details</h2>
+        <div class="popup-boxes">
+            <div class="image-container">
+                <img src="{{selectedCocktail.image}}">
+            </div>
+            <div class="details-box">
+                <div>{{selectedCocktail.name}}</div>
+                <div>{{selectedCocktail.category}}</div>  
+                <div>{{selectedCocktail.alcoholic}}</div>
+                <div *ngIf="selectedCocktail.measure1"> {{selectedCocktail.measure1}} of {{selectedCocktail.ingredient1}}</div>
+                <div *ngIf="selectedCocktail.measure2"> {{selectedCocktail.measure2}} of {{selectedCocktail.ingredient2}}</div>
+                <div *ngIf="selectedCocktail.measure3"> {{selectedCocktail.measure3}} of {{selectedCocktail.ingredient3}}</div>
+                <div *ngIf="selectedCocktail.measure4"> {{selectedCocktail.measure4}} of {{selectedCocktail.ingredient4}}</div>
+                <div *ngIf="selectedCocktail.measure5"> {{selectedCocktail.measure5}} of {{selectedCocktail.ingredient5}}</div>
+                <div *ngIf="selectedCocktail.measure6"> {{selectedCocktail.measure6}} of {{selectedCocktail.ingredient6}}</div>
+                <div *ngIf="selectedCocktail.measure7"> {{selectedCocktail.measure7}} of {{selectedCocktail.ingredient7}}</div>
+                <div *ngIf="selectedCocktail.measure8"> {{selectedCocktail.measure8}} of {{selectedCocktail.ingredient8}}</div>
+                <div>{{selectedCocktail.instructions}}</div>
+            </div>
+            <i class="fas fa-times" (click)="closePopup()"></i>
+        </div>
+    </div>
 </div>

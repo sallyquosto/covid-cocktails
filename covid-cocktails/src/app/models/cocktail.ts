@@ -1,4 +1,5 @@
 export interface Cocktail {
+    id: string
     name: string;
     category: string;
     alcoholic: string;
@@ -19,4 +20,5 @@ export interface Cocktail {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
+    image: string
 }

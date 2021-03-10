@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Cocktail } from './models/cocktail';
-// import { Meal } from './models/cocktail'
+import { Meal } from './models/cocktail'
 
 
 @Injectable({
@@ -9,18 +9,18 @@ import { Cocktail } from './models/cocktail';
 })
 export class CocktailsService {
   cocktails: Cocktail[] = [];
-  // meals: Meal[] = [];
+  meals: Meal[] = [];
   apiURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=';
   randomURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/random.php';
   popularURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/popular.php';
-  // goodMeal: string = 'https://www.themealdb.com/api/json/v2/9973533/random.php';
+  goodMeal: string = 'https://www.themealdb.com/api/json/v2/9973533/random.php';
   drinks: any;
 
   constructor(private http: HttpClient) { }
 
-  // getMealz = (): any => {
-  //   return this.http.get(this.goodMeal)
-  // }
+  getMealz = (): any => {
+    return this.http.get(this.goodMeal)
+  }
 
   getCocktail(strDrink: string) {
     return this.http.get(`${this.apiURL}${strDrink}`)

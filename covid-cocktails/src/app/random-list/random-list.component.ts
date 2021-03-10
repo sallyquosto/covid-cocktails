@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
 import { Cocktail } from '../models/cocktail';
-// import { Meal } from '../models/cocktail';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-random-list',
@@ -14,7 +12,6 @@ export class RandomListComponent implements OnInit {
   cocktails: Cocktail[] = []
     title = 'covid cocktails';
 
-  // meals: Meal[] = [];
 
 
   // subscribes to cocktail service to return drinks on html
@@ -65,7 +62,7 @@ export class RandomListComponent implements OnInit {
           /*Items listed above are how they appear from postman to render; strDrink, strInstructions*/
         }
       });
-      console.log(this.cocktails);
+      // console.log(this.cocktails);
     })
   }
 

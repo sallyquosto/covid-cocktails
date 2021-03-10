@@ -18,19 +18,21 @@
   margin-bottom: 20px;
 }
 
-a {
-  background-color: #e2d36b;
+a.newButton {
+  /* background-color: #e2d36b; */
   width: auto;
   height: auto;
   padding: 4px;
   border-radius: 4px;
   text-decoration: none;
   color: black;
+  text-shadow: 1px 1px 2px white, 0 0 1em #6C8CBF, 0 0 0.2em #E2D36B;
 }
 
 .rand-1 {
   margin-bottom: 5px;
 }
+
 
 .reload {
   display: flex;
@@ -43,23 +45,24 @@ a {
   border-style: none;
   /* text-decoration: none; */
   color: black;
+  cursor: pointer;
 }
 /*not used below*/
 .glow {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-/* @-webkit-keyframes glow {
+@keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #BAC94A,
+      0 0 40px #BAC94A, 0 0 50px #BAC94A, 0 0 60px #BAC94A, 0 0 70px #BAC94A;
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px #96D7C6, 0 0 40px #96D7C6,
+      0 0 50px #96D7C6, 0 0 60px #96D7C6, 0 0 70px #96D7C6, 0 0 80px #96D7C6;
   }
-} */
+}
 
 .picture {
   display: flex;

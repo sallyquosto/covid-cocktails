@@ -2,17 +2,15 @@
 <br>
 <br>
 <div class="rand-1">
-    <a routerLink='/random-list' routerLinkActive="active">Randomize it</a>
-    and pick another choice...
 </div>
 <div class="menu-a">
     <!-- ngFor renders a template for each item in our collection from our interface-->
     <div *ngFor='let cocktail of cocktails' class="menu">
 
-        <div><strong>Your random choice:</strong> {{cocktail.name}}</div>
-        <div><strong>Category:</strong> {{cocktail.category}}</div>
-        <div><strong>Alcohol Content:</strong> {{cocktail.alcoholic}}</div>
-        <div><strong>Instructions:</strong> {{cocktail.instructions}}</div>
+        <div><strong><span>Your random choice:</span><br></strong> {{cocktail.name}}</div>
+        <div><strong><span>Category:</span><br></strong> {{cocktail.category}}</div>
+        <div><strong><span>Alcohol Content:</span><br></strong> {{cocktail.alcoholic}}</div>
+        <div><strong><span>Instructions:</span><br></strong> {{cocktail.instructions}}</div>
         <div class="intel">
             <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
             <div *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
@@ -23,7 +21,13 @@
             <div *ngIf="cocktail.measure6"> {{cocktail.measure6}} of {{cocktail.ingredient6}}</div>
             <div *ngIf="cocktail.measure7"> {{cocktail.measure7}} of {{cocktail.ingredient7}}</div>
             <div *ngIf="cocktail.measure8"> {{cocktail.measure8}} of {{cocktail.ingredient8}}</div>
+            <div class="picture">
+                <img class="cocktail-image" src="{{cocktail.image}}" width="100" height="100" alt="picture of alcoholic beverage">
+            </div>
+
+            <input class="reload" type="button" value="View Another" onClick="history.go(0)">
         </div>
+        <p class="front">{{title | uppercase}}</p>
 
     </div>
 

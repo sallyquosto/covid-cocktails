@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
 import { Cocktail } from '../models/cocktail';
+// import { Meal } from '../models/cocktail';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -11,14 +12,16 @@ import { Location } from '@angular/common';
 })
 export class RandomListComponent implements OnInit {
   cocktails: Cocktail[] = []
+    title = 'covid cocktails';
+
+  // meals: Meal[] = [];
+
 
   // subscribes to cocktail service to return drinks on html
   constructor(
     private cocktailservice: CocktailsService,
     public router: Router
   ) { }
-
-
 
   ngOnInit(): void {
     this.cocktailservice.getRandom().subscribe((data: any) => {
@@ -57,12 +60,12 @@ export class RandomListComponent implements OnInit {
           ingredient12: drink.strIngredient12,
           ingredient13: drink.strIngredient13,
           ingredient14: drink.strIngredient14,
-          ingredient15: drink.strIngredient15
-
+          ingredient15: drink.strIngredient15,
+          image: drink.strDrinkThumb
           /*Items listed above are how they appear from postman to render; strDrink, strInstructions*/
         }
       });
-      /*console.log(this.cocktails);*/
+      console.log(this.cocktails);
     })
   }
 

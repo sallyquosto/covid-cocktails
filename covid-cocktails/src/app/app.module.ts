@@ -15,6 +15,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { Router } from '@angular/router';
 import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RandomMixComponent } from './random-mix/random-mix.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     AboutUsComponent,
-    CocktailDetailsComponent
+    CocktailDetailsComponent,
+    RandomMixComponent
   ],
   imports: [
     AppRoutingModule,

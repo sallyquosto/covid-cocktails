@@ -4,7 +4,7 @@
     /* text-align: left; */
     padding: 15px;
     border-radius: 2px;
-    height: 400px;
+    height: auto;
     font-size: 20px;
 }
 
@@ -29,4 +29,35 @@ a {
 
 .rand-1 {
     margin-bottom: 5px;
+}
+
+.reload,button {
+    display: flex;
+    background-color: #E2D36B;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: auto;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+.cocktail-image {
+    display: flex;
+    border-radius: 4px;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+}
+
+span {
+    text-decoration: underline;
 }

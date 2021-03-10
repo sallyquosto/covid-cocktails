@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-    padding: .5em;
+    /* padding: .5em; */
     max-width: 100%;
     min-height: 100%;
     margin: auto;
@@ -68,10 +68,11 @@ a {
 .dropdown button {
     border: none;
     padding: 16px 16px;
-    background-color: #6C8CBF;
+    background-color: #bac94a;
     color: white;
     transition: .3s;
     cursor: pointer;
+    outline: none;
 }
 
 .dropdown:hover button {

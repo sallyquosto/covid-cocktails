@@ -8,4 +8,17 @@ h1 {
     display: flex;
     align-items: center;
     margin: 0px;
+    font-size: 30px;
+}
+
+header {
+    padding: 0, 0, 10px, 0;
+}
+
+.fa-cocktail:before {
+    padding-right: 5px;
+}
+
+.title {
+    background-color: #bac94a;
 }

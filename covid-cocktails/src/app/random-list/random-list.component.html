@@ -9,7 +9,7 @@
 
         <div><strong><span>Your random choice:</span><br></strong> {{cocktail.name}}</div>
         <div><strong><span>Category:</span><br></strong> {{cocktail.category}}</div>
-        <div><strong><span>Alcohol Content:</span><br></strong> {{cocktail.alcoholic}}</div>
+        <div><strong><span>Alcohol or DD:</span><br></strong> {{cocktail.alcoholic}}</div>
         <div><strong><span>Instructions:</span><br></strong> {{cocktail.instructions}}</div><br>
         <div class="intel">
             <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
@@ -27,8 +27,10 @@
                     alt="picture of alcoholic beverage">
             </div>
             <div class="glow">
+                <!--This is my refresh button-->
                 <input class="reload" type="button" value="View Another" onClick="history.go(0)"><br>
-                <a routerLink='/random-mix' routerLinkActive="active" class="newButton">Click here and try our new pair a meal</a><br>
+                <!--Link to the Food and Beverage page-->
+                <a routerLink='/random-mix' routerLinkActive="active" class="newButton">Click here and try our <strong>NEW</strong> pair a meal</a><br>
                 <p>with a drink!</p>
             </div>
         </div>

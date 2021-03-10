@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Cocktail } from './models/cocktail';
-import { Meal } from './models/cocktail'
+import { Meal } from './models/meal'
 
 
 @Injectable({

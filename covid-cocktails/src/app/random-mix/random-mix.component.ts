@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
-import { Meal } from '../models/cocktail';
+import { Meal } from '../models/meal';
 import { Cocktail } from '../models/cocktail';
 import { Router } from '@angular/router';
+import { MealsService } from '../meals.service';
 
 
 
@@ -19,12 +20,13 @@ export class RandomMixComponent implements OnInit {
 
   constructor(
     private cocktailservice: CocktailsService,
-    public router: Router
+    private mealsservice: MealsService,
+    // public router: Router
   ) { }
 
   ngOnInit(): void {
     this.cocktailservice.getRandom().subscribe((data: any) => {
-      this.cocktailservice.getMealz().subscribe((data: any) => {
+      this.mealsservice.getMealz().subscribe((data: any) => {
         this.cocktails = data.drinks.map((drink: any) => {
           this.cocktails = data.meals.map((meal: any) => {
             return {

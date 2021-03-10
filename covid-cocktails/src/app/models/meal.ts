@@ -1,9 +1,9 @@
-export interface Cocktail {
+export interface Meal {
     id: string;
-    name: string;
-    category: string;
-    alcoholic: string;
+    meal: string;
+    area: string;
     instructions: string;
+    image: string;
     measure1: any;
     ingredient1: string;
     measure2: any;
@@ -20,5 +20,4 @@ export interface Cocktail {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
-    image: string;
 }

@@ -1,5 +1,5 @@
 export interface Cocktail {
-    id: string
+    id: string;
     name: string;
     category: string;
     alcoholic: string;

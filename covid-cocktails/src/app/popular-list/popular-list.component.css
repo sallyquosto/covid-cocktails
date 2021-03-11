@@ -1,4 +1,4 @@
-.carousel{
+.carousel {
     display: flex;
     flex-wrap: wrap;
     overflow-x: hidden; 
@@ -7,23 +7,38 @@
     height: 550px;
     justify-content: center;
     align-items: center;
-    margin: 5px;
 }
 
-.cocktail-image{
-    height:250px;
-    width:200px;
+.cocktail-image {
+    height:200px;
+    width:150px;
     margin: 15px;
     position: relative;
+    box-shadow: 5px 5px 5px;
 }
 
-h2{
-    justify-content: space-between;
+h1 {
+    font-size: 20px;
     text-align: center;
-    position: relative;
-    top: -60px;
+    background: rgb(5 6 5 / 50%);
+    margin: 0;
+}
+
+h2 {
+    justify-content: space-between;
+    text-align: center; 
     padding: 0px;
     margin: 0px;
+    font-size: 15px;
 }
 
+.name {
+    color: #fff;
+    text-shadow: #343a40 2px 2px;
+    background: rgb(5 6 5 / 30%);
+    position: relative;
+    top: -54px;
+    width: 83%;
+    left: 15px;
+}
 

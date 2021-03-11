@@ -20,5 +20,21 @@ export interface Cocktail {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
-    image: string;
+    measure9: string;
+    ingredient9: string
+    measure10: string;
+    ingredient10: string
+    measure11: string;
+    ingredient11: string
+    measure12: string;
+    ingredient12: string
+    measure13: string;
+    ingredient13: string
+    measure14: string;
+    ingredient14: string
+    measure15: string;
+    ingredient15: string
+    glass: string;
+    image: string
+
 }

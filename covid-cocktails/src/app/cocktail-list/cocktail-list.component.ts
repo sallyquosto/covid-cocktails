@@ -1,6 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../cocktails.service';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { Cocktail } from '../models/cocktail';
 
 @Component({
@@ -9,6 +10,8 @@ import { Cocktail } from '../models/cocktail';
   styleUrls: ['./cocktail-list.component.css']
 })
 export class CocktailListComponent implements OnInit {
+  drinkData: any;
+
 
 
   get cocktails(): Cocktail[] {

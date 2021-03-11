@@ -1,6 +1,7 @@
 export interface Meal {
     id: string;
     meal: string;
+    category: string;
     area: string;
     instructions: string;
     image: string;
@@ -20,4 +21,20 @@ export interface Meal {
     ingredient7: string;
     measure8: any;
     ingredient8: string;
+    measure9: any;
+    measure10: any;
+    measure11: any;
+    measure12: any;
+    measure13: any;
+    measure14: any;
+    measure15: any;
+    measure16: any;
+    ingredient9: string;
+    ingredient10: string;
+    ingredient11: string;
+    ingredient12: string;
+    ingredient13: string;
+    ingredient14: string;
+    ingredient15: string;
+    ingredient16: string;
 }

@@ -22,6 +22,7 @@ a.newButton {
   /* background-color: #e2d36b; */
   width: auto;
   height: auto;
+  font-size: larger;
   padding: 4px;
   border-radius: 4px;
   text-decoration: none;
@@ -54,13 +55,13 @@ a.newButton {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #BAC94A,
-      0 0 40px #BAC94A, 0 0 50px #BAC94A, 0 0 60px #BAC94A, 0 0 70px #BAC94A;
+    text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 30px #BAC94A,
+      0 20px 40px #BAC94A, 0 0 50px #BAC94A, 0 0 60px #BAC94A, 0 0 70px #BAC94A;
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #96D7C6, 0 0 40px #96D7C6,
-      0 0 50px #96D7C6, 0 0 60px #96D7C6, 0 0 70px #96D7C6, 0 0 80px #96D7C6;
+    text-shadow: 0 0 30px #fff, 0 0 30px #96D7C6, 0 0 40px #96D7C6,
+      0 20px 50px #96D7C6, 0 0 60px #96D7C6, 0 0 70px #96D7C6, 0 0 80px #96D7C6;
   }
 }
 

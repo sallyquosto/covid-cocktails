@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { fromEventPattern } from 'rxjs';
 import { Meal } from './models/meal';
 
 @Injectable({

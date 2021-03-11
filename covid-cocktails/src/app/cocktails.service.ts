@@ -14,7 +14,7 @@ export class CocktailsService {
   filterGlassURL: string ="https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?g="
   filterIngredientURL: string = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="
   filterAlcoholicURL: string = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?a="
-  drinkIdURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i'
+  drinkIdURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i='
  
 
   constructor(private http: HttpClient) { }

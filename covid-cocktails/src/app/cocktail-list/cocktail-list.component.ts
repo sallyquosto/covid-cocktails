@@ -13,7 +13,6 @@ export class CocktailListComponent implements OnInit {
   drinkData: any;
 
 
-
   get cocktails(): Cocktail[] {
     return this.cocktailsservice.cocktails;
   }

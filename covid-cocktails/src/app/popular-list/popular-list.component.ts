@@ -24,7 +24,7 @@ export class PopularListComponent implements OnInit {
           image: drink.strDrinkThumb
         }
       });
-      console.log(this.cocktails);
+      // console.log(this.cocktails);
     })
 
 }

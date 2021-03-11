@@ -1,7 +1,9 @@
 <button (click)="navHome()">Return to Home</button>
 <div class="cocktail-list">
     <div *ngFor="let cocktail of cocktails">
-        <div>Drink Name: {{cocktail.name}}</div>
+        <div class="name">
+            <h2>{{cocktail.name}}</h2>
+        </div>
         <img class="cocktail-image" src="{{cocktail.image}}" (click)="onSelect(cocktail)">
     </div>
 </div>

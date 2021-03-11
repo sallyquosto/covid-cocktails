@@ -1,0 +1,5 @@
+.fa-cocktail:before {
+    content: "\f561";
+    display: flex;
+    margin-bottom: 10px;
+}

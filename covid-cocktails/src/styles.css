@@ -43,9 +43,9 @@ i.fas.fa-cocktail.fa-3x {
 h1.front {
     font-size: 50px;
     font-weight: bold;
-    margin: 20px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #5AA7A7;
+    margin: 0;
 }
 
 h5 {

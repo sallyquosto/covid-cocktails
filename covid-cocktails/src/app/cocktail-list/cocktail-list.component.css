@@ -16,10 +16,19 @@ img {
 }
 
 .cocktail-image{
-    height:250px;
-    width:200px;
-    margin: 15px;
-    position: relative;
+  height:200px;
+  width:150px;
+  margin: 15px;
+  position: relative;
+  box-shadow: 5px 5px 5px;
+}
+
+h2 {
+  justify-content: space-between;
+  text-align: center; 
+  padding: 0px;
+  margin: 0px;
+  font-size: 11px;
 }
 
 .popup-overlay{

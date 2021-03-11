@@ -31,8 +31,13 @@ header {
     padding-bottom: 50px;
 }
 
+i.fas.fa-cocktail.fa-3x {
+    margin-bottom: 10px;
+}
+
 .covid {
     display: flex;
+    align-items: center;
 }
 
 h1.front {

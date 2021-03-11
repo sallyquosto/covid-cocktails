@@ -21,3 +21,59 @@ img {
     margin: 15px;
     position: relative;
 }
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 10, 12, 0.9);
+    height: 100vh;
+    width: 100%;
+    z-index: +1;
+  }
+
+  .popup-boxes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: +1;
+    width: auto;
+    height: auto;
+    color: white;
+    background-color: #111419;
+    border-radius: 10px;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll!important;
+  }
+
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    height: auto;
+    padding: 3px;
+    margin-top: 5px;
+    text-align: center; 
+  }
+
+  #details-close-btn {
+      display: flex;
+      align-items: center;
+  }
+
+  @media only screen and (min-width: 768px) { 
+      
+
+  }

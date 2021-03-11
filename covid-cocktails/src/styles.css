@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +8,13 @@
 
 html, body {
     height: 100%;
-    padding: .5em;
+    /* padding: .5em; */
     max-width: 100%;
     min-height: 100%;
     margin: auto;
-    background-color: #96D7C6;
+    background-color: white;
+    scroll-behavior: smooth;
+    /* position: relative; */
 }
 
 header {
@@ -34,7 +37,10 @@ header {
 
 h1.front {
     font-size: 50px;
+    font-weight: bold;
     margin: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #5AA7A7;
 }
 
 h5 {
@@ -68,10 +74,12 @@ a {
 .dropdown button {
     border: none;
     padding: 16px 16px;
-    background-color: #6C8CBF;
+    background-color: #bac94a;
     color: white;
-    transition: .3s;
+    transition: 3s;
+    transition-duration: 2s;
     cursor: pointer;
+    outline: none;
 }
 
 .dropdown:hover button {
@@ -80,7 +88,7 @@ a {
 
 .dropdown div {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0.2,0,0,0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
     visibility: hidden;
     position: absolute;
@@ -108,6 +116,7 @@ a {
 .dropdown div a:hover {
     background-color: #6C8CBF;
     color: #000;
+    transition-duration: 1s;
 }
 /*Drop down hover ends*/
 
@@ -115,7 +124,6 @@ footer {
     display: flex;
     justify-content: center;
     clear: both;
-    position: relative;
 }
 
 .theMakers {

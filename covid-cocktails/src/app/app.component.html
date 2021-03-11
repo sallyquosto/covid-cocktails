@@ -1,6 +1,7 @@
 <!--Buttons to the components-->
-<div class="dropdown">
-    <button></button>
+<div class="title">
+    <div class="dropdown">
+    <button><i class="fas fa-bars fa-2x"></i></button>
     <div class="ourLinks">
         <a routerLink='/' routerLinkActive="active">Home</a>
         <a routerLink='/random-list' routerLinkActive="active">Randomize it</a>
@@ -12,7 +13,9 @@
 <br>
 <header>
     <div class="covid">
-        <h1 class="front">{{title | uppercase}}</h1>
+        <i class="fas fa-cocktail fa-2x" ></i> <h1 class="front">{{title | uppercase}}</h1>
     </div>
 </header>
+</div>
+
 <router-outlet></router-outlet>

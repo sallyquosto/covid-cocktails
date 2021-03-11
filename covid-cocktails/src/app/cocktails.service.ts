@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Cocktail } from './models/cocktail';
+import { Meal } from './models/meal'
 
 
 @Injectable({
@@ -8,6 +9,7 @@ import { Cocktail } from './models/cocktail';
 })
 export class CocktailsService {
   cocktails: Cocktail[] = [];
+  meals: Meal[] = [];
   apiURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=';
   randomURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/random.php';
   popularURL: string = 'https://www.thecocktaildb.com/api/json/v2/9973533/popular.php'
@@ -18,6 +20,7 @@ export class CocktailsService {
  
 
   constructor(private http: HttpClient) { }
+
 
   getCocktail(strDrink: string) {
     return this.http.get(`${this.apiURL}${strDrink}`);

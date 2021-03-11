@@ -10,6 +10,7 @@ import { Cocktail } from '../models/cocktail';
 })
 export class PopularListComponent implements OnInit {
   cocktails: Cocktail[] = []
+  selectedCocktail?: any;
 
   constructor(private cocktailsservice: CocktailsService) { }
 
@@ -28,4 +29,13 @@ export class PopularListComponent implements OnInit {
     })
 
 }
+onSelect(cocktail: any) {
+  this.selectedCocktail = cocktail;
+}
+
+closePopup() {
+  this.selectedCocktail = null;
+}
+
+
 }

@@ -21,9 +21,6 @@ export class CocktailsService {
 
   constructor(private http: HttpClient) { }
 
-  getMealz = (): any => {
-    return this.http.get(this.goodMeal)
-  }
 
   getCocktail(strDrink: string) {
     return this.http.get(`${this.apiURL}${strDrink}`);

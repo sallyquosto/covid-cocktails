@@ -1,10 +1,59 @@
 a.newButton {
-    /* background-color: #e2d36b; */
-    width: auto;
-    height: auto;
-    padding: 4px;
-    border-radius: 4px;
-    text-decoration: none;
-    color: black;
-    text-shadow: 1px 1px 2px white, 0 0 1em #6C8CBF, 0 0 0.2em #E2D36B;
-  }
+  /* background-color: #e2d36b; */
+  width: auto;
+  height: auto;
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px white, 0 0 1em #6c8cbf, 0 0 0.2em #e2d36b;
+}
+
+.randContainer {
+  background: #BAC94A;
+}
+
+.menu {
+  background: #5aa7a7;
+  width: auto;
+  /* text-align: left; */
+  padding: 15px;
+  border-radius: 2px;
+  height: auto;
+  font-size: 20px;
+}
+
+.intel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.rand-1 {
+  margin-bottom: 5px;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cocktail-image {
+  display: flex;
+  border-radius: 4px;
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+span {
+  text-decoration: underline;
+}
+/*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */

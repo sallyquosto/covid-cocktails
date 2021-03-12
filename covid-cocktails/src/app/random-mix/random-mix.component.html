@@ -1,9 +1,11 @@
+
 <div class="randContainer">
 <div *ngFor='let meal of meals' class="food">
     <div><strong><span>Your random food choice:</span></strong> {{meal.meal}}</div>
     <!-- <div><strong><span>Category:</span></strong> {{meal.category}}</div> -->
     <div><strong><span>Origin:</span></strong> {{meal.area}}</div>
     <div><strong><span>Instructional:</span></strong> {{meal.instructions}}</div>
+    <div><strong><span>Type:</span></strong> {{meal.tags}}</div>
     <!--Food dilemma-->
     <div class="intel">
         <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
@@ -32,4 +34,3 @@
 </div>
 </div>
 
-<!-- <div>{{meals.strIngredient1}}</div> -->

@@ -8,3 +8,9 @@ a.newButton {
     color: black;
     text-shadow: 1px 1px 2px white, 0 0 1em #6C8CBF, 0 0 0.2em #E2D36B;
   }
+
+  .randContainer {
+    display: flex;
+    justify-content: center;
+  }
+

@@ -28,6 +28,7 @@ export class RandomMixComponent implements OnInit {
           type: meal.strCategory,
           area: meal.strArea,
           instructions: meal.strInstructions,
+          tags: meal.strTags,
           measure1: meal.strMeasure1,
           measure2: meal.strMeasure2,
           measure3: meal.strMeasure3,

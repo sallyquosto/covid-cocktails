@@ -8,6 +8,7 @@
         <a routerLink='/popular-list' routerLinkActive="active">The Popular</a>
     </div>
 </div>
+
 <br>
 <br>
 <br>
@@ -15,7 +16,15 @@
     <div class="covid">
         <i class="fas fa-cocktail fa-3x" ></i> <h1 class="front">{{title | uppercase}}</h1>
     </div>
+    
 </header>
+
+<div class="links-desktop">
+        <a routerLink='/' routerLinkActive="active">Home</a>
+        <a routerLink='/random-list' routerLinkActive="active">Randomize it</a>
+        <a routerLink='/popular-list' routerLinkActive="active">The Popular</a>
+    </div>
+    
 </div>
 
 <router-outlet></router-outlet>

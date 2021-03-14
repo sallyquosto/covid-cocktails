@@ -1,35 +1,155 @@
 <button (click)="navHome()">Return to Home</button>
 <div class="cocktail-list">
-    <div *ngFor="let cocktail of cocktails">
-        <div class="name">
-            <h2>{{cocktail.name}}</h2>
-        </div>
-        <img class="cocktail-image" src="{{cocktail.image}}" (click)="onSelect(cocktail)">
+  <div *ngFor="let cocktail of cocktails">
+    <div class="name">
+      <h2>{{ cocktail.name }}</h2>
     </div>
+    <img
+      class="cocktail-image"
+      src="{{ cocktail.image }}"
+      (click)="onSelect(cocktail)"
+    />
+  </div>
 </div>
 <div *ngIf="selectedCocktail">
-    <div class="popup-overlay">
-        <div class="popup-boxes">
-            <div class="details-box">
-                <div class="image-container">
-                    <img src="{{selectedCocktail.image}}">
-                </div>
-                <div class="details">
-                    <div>{{selectedCocktail.name}}</div>
-                    <div>{{selectedCocktail.category}}</div>  
-                    <div>{{selectedCocktail.alcoholic}}</div>
-                    <div *ngIf="selectedCocktail.measure1"> {{selectedCocktail.measure1}} of {{selectedCocktail.ingredient1}}</div>
-                    <div *ngIf="selectedCocktail.measure2"> {{selectedCocktail.measure2}} of {{selectedCocktail.ingredient2}}</div>
-                    <div *ngIf="selectedCocktail.measure3"> {{selectedCocktail.measure3}} of {{selectedCocktail.ingredient3}}</div>
-                    <div *ngIf="selectedCocktail.measure4"> {{selectedCocktail.measure4}} of {{selectedCocktail.ingredient4}}</div>
-                    <div *ngIf="selectedCocktail.measure5"> {{selectedCocktail.measure5}} of {{selectedCocktail.ingredient5}}</div>
-                    <div *ngIf="selectedCocktail.measure6"> {{selectedCocktail.measure6}} of {{selectedCocktail.ingredient6}}</div>
-                    <div *ngIf="selectedCocktail.measure7"> {{selectedCocktail.measure7}} of {{selectedCocktail.ingredient7}}</div>
-                    <div *ngIf="selectedCocktail.measure8"> {{selectedCocktail.measure8}} of {{selectedCocktail.ingredient8}}</div>
-                    <div>{{selectedCocktail.instructions}}</div>
-                    <i class="fas fa-times" id="details-close-btn" (click)="closePopup()"></i>
-                </div>
-            </div>
+  <div class="popup-overlay">
+    <div class="popup-boxes">
+      <div class="details-box">
+        <div class="image-container">
+          <img src="{{ selectedCocktail.image }}" />
         </div>
+        <div class="details">
+          <div>{{ selectedCocktail.name }}</div>
+          <div>{{ selectedCocktail.category }}</div>
+          <div>{{ selectedCocktail.alcoholic }}</div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure1" class="measurement">
+              {{ selectedCocktail.measure1 }} of 
+            </div>
+            <div *ngIf="selectedCocktail.ingredient1" class="ing"> 
+              {{ selectedCocktail.ingredient1 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure2" class="measurement">
+              {{ selectedCocktail.measure2 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient2" class="ing">
+              {{ selectedCocktail.ingredient2 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure3" class="measurement">
+              {{ selectedCocktail.measure3 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient3" class="ing">
+              {{ selectedCocktail.ingredient3 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure4" class="measurement">
+              {{ selectedCocktail.measure4 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient4" class="ing">
+              {{ selectedCocktail.ingredient4 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure5" class="measurement">
+              {{ selectedCocktail.measure5 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient5" class="ing">
+              {{ selectedCocktail.ingredient5 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure6" class="measurement">
+              {{ selectedCocktail.measure6 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient6" class="ing">
+              {{ selectedCocktail.ingredient6 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure7" class="measurement">
+              {{ selectedCocktail.measure7 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient7" class="ing">
+              {{ selectedCocktail.ingredient7 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure8" class="measurement">
+              {{ selectedCocktail.measure8 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient8" class="ing">
+              {{ selectedCocktail.ingredient8 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure9" class="measurement">
+              {{ selectedCocktail.measure9 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient9" class="ing">
+              {{ selectedCocktail.ingredient9 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure10" class="measurement">
+              {{ selectedCocktail.measure10 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient10" class="ing">
+              {{ selectedCocktail.ingredient10 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure11" class="measurement">
+              {{ selectedCocktail.measure11 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient11" class="ing">
+              {{ selectedCocktail.ingredient11 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure12" class="measurement">
+              {{ selectedCocktail.measure12 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient12" class="ing">
+              {{ selectedCocktail.ingredient12 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure13" class="measurement">
+              {{ selectedCocktail.measure13 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient13" class="ing">
+              {{ selectedCocktail.ingredient13 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure14" class="measurement">
+              {{ selectedCocktail.measure14 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient14" class="ing">
+              {{ selectedCocktail.ingredient14 }}
+            </div>
+          </div>
+          <div class="ingredients">
+            <div *ngIf="selectedCocktail.measure15" class="measurement">
+              {{ selectedCocktail.measure15 }} of
+            </div>
+            <div *ngIf="selectedCocktail.ingredient15" class="ing">
+              {{ selectedCocktail.ingredient15 }}
+            </div>
+          </div>
+          <div>{{ selectedCocktail.instructions }}</div>
+          <i
+            class="fas fa-times"
+            id="details-close-btn"
+            (click)="closePopup()"
+          ></i>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

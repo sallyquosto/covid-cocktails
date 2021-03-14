@@ -79,6 +79,18 @@ h2 {
     text-align: center; 
   }
 
+  .ingredients {
+    display: flex;
+  }
+
+  .measurement {
+    flex: 1;
+  }
+
+  .ing {
+    margin-left: 3px;
+  }
+
   #details-close-btn {
       display: flex;
       align-items: center;

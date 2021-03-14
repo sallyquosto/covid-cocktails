@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio  {
+    height: 500px;
+    width: 300px;
+    /* border: solid 3px #5aa7a7; */
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(150,215,198);
+    background: linear-gradient(0deg, rgba(150,215,198,1) 30%, rgba(186,201,74,1) 98%); 
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    margin: 50px;
+
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    background: rgb(90 167 167 / 50%);
+    margin: 0;
+    
+}
+
+h2 {
+    font-family: 'Beth Ellen', cursive;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+    
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .bio  {
+        margin: 15px;
+        width: 250px;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+    
+    }
+
+    
+}

@@ -6,6 +6,7 @@ import { PopularListComponent } from './popular-list/popular-list.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { RandomListComponent } from './random-list/random-list.component';
 import { RandomMixComponent } from './random-mix/random-mix.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   {path: 'home', component: SearchCriteriaComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'cocktail-details', component: CocktailDetailsComponent},
   {path: 'popular-list', component: PopularListComponent},
   {path: 'random-mix', component: RandomMixComponent},
+  {path: 'about-us', component: AboutUsComponent},
   {path:'', redirectTo: '/home', pathMatch: 'full'},
 ];
 @NgModule({

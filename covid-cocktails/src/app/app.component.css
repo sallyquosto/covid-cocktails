@@ -3,15 +3,3 @@
     display: flex;
     margin-bottom: 10px;
 }
-
-/* @media only screen and (min-width: 1000px) {
-    .fa-bars {
-        display: hidden;
-    }
-
-    .ourLinks {
-    display: flex;
-    justify-content: space-around;
-    }
-    
-} */

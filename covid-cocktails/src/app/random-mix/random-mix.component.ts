@@ -12,7 +12,7 @@ import { MealsService } from '../meals.service';
 })
 export class RandomMixComponent implements OnInit {
   meals: Meal[] = [];
-
+  title = 'covid cocktails';
 
 
   constructor(
@@ -62,6 +62,7 @@ export class RandomMixComponent implements OnInit {
         }
       });
       console.log(this.meals)
+
     })
 
   }

@@ -1,4 +1,6 @@
 export interface Meal {
+    title: string;
+    type: string;
     id: string;
     meal: string;
     category: string;
@@ -28,7 +30,6 @@ export interface Meal {
     measure13: any;
     measure14: any;
     measure15: any;
-    measure16: any;
     ingredient9: string;
     ingredient10: string;
     ingredient11: string;
@@ -36,5 +37,4 @@ export interface Meal {
     ingredient13: string;
     ingredient14: string;
     ingredient15: string;
-    ingredient16: string;
 }

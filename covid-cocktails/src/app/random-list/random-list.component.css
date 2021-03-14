@@ -90,4 +90,23 @@ span {
   text-decoration: underline;
 }
 
+/* .dark {
+  background-color: #5AA7A7;
+}
+
+.light {
+  background-color: #E2D36B;
+} */
+
 /*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    width: 800px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+}

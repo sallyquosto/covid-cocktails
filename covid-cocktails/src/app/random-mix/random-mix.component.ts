@@ -12,7 +12,7 @@ import { MealsService } from '../meals.service';
 })
 export class RandomMixComponent implements OnInit {
   meals: Meal[] = [];
-
+  title = 'covid cocktails';
 
 
   constructor(
@@ -44,6 +44,11 @@ export class RandomMixComponent implements OnInit {
           measure13: meal.strMeasure13,
           measure14: meal.strMeasure14,
           measure15: meal.strMeasure15,
+          measure16: meal.strMeasure16,
+          measure17: meal.strMeasure17,
+          measure18: meal.strMeasure18,
+          measure19: meal.strMeasure19,
+          measure20: meal.strMeasure20,
           ingredient1: meal.strIngredient1,
           ingredient2: meal.strIngredient2,
           ingredient3: meal.strIngredient3,
@@ -59,12 +64,21 @@ export class RandomMixComponent implements OnInit {
           ingredient13: meal.strIngredient13,
           ingredient14: meal.strIngredient14,
           ingredient15: meal.strIngredient15,
+          ingredient16: meal.strIngredient16,
+          ingredient17: meal.strIngredient17,
+          ingredient18: meal.strIngredient18,
+          ingredient19: meal.strIngredient19,
+          ingredient20: meal.strIngredient20,
           image: meal.strMealThumb
         }
       });
       console.log(this.meals)
+
     })
 
   }
 
 }
+
+
+// .trim() ?meal.strMeasure1:null

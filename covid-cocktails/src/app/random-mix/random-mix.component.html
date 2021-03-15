@@ -1,36 +1,55 @@
 
 <div class="randContainer">
-<div *ngFor='let meal of meals' class="food">
-    <div><strong><span>Your random food choice:</span></strong> {{meal.meal}}</div>
-    <!-- <div><strong><span>Category:</span></strong> {{meal.category}}</div> -->
-    <div><strong><span>Origin:</span></strong> {{meal.area}}</div>
-    <div><strong><span>Instructional:</span></strong> {{meal.instructions}}</div>
-    <div><strong><span>Type:</span></strong> {{meal.tags}}</div>
-    <!--Food dilemma-->
-    <div class="intel">
-        <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
-        <p><span>Add the following ingredients:</span></p>
-        <div *ngIf="meal.measure1"> {{meal.measure1}} of {{meal.ingredient1}}</div>
-        <div *ngIf="meal.measure2"> {{meal.measure2}} of {{meal.ingredient2}}</div>
-        <div *ngIf="meal.measure3"> {{meal.measure3}} of {{meal.ingredient3}}</div>
-        <div *ngIf="meal.measure4"> {{meal.measure4}} of {{meal.ingredient4}}</div>
-        <div *ngIf="meal.measure5"> {{meal.measure5}} of {{meal.ingredient5}}</div>
-        <div *ngIf="meal.measure6"> {{meal.measure6}} of {{meal.ingredient6}}</div>
-        <div *ngIf="meal.measure7"> {{meal.measure7}} of {{meal.ingredient7}}</div>
-        <div *ngIf="meal.measure8"> {{meal.measure8}} of {{meal.ingredient8}}</div>
-        <div *ngIf="meal.measure9"> {{meal.measure9}} of {{meal.ingredient9}}</div>
-        <div *ngIf="meal.measure10"> {{meal.measure10}} of {{meal.ingredient10}}</div>
-        <div *ngIf="meal.measure11"> {{meal.measure11}} of {{meal.ingredient11}}</div>
-        <div *ngIf="meal.measure12"> {{meal.measure12}} of {{meal.ingredient12}}</div>
-        <div *ngIf="meal.measure13"> {{meal.measure13}} of {{meal.ingredient13}}</div>
-        <div *ngIf="meal.measure14"> {{meal.measure14}} of {{meal.ingredient14}}</div>
-        <div *ngIf="meal.measure15"> {{meal.measure15}} of {{meal.ingredient15}}</div>
-        <div *ngIf="meal.measure16"> {{meal.measure16}} of {{meal.ingredient16}}</div>
-        <div class="picture">
-            <img class="cocktail-image" src="{{meal.image}}" width="100" height="100"
-                alt="Good food">
+    <div *ngFor='let meal of meals' class="food">
+        <div><strong><span>Your random food choice:</span></strong><br> {{meal.title}}</div>
+        <div><strong><span>Category:</span></strong><br> {{meal.type}}</div>
+        <div><strong><span>Origin:</span></strong><br> {{meal.area}}</div>
+        <div class="flipCard">
+            <div class="card" onclick="this.classList.toggle('flipped');">
+                <div class="side front">Click for Cooking Instructions</div>
+                <div class="side back"><strong><span>The Details:</span></strong> {{meal.instructions}}</div>
+            </div>
         </div>
-<a routerLink='/random-list' routerLinkActive="active" class="newButton">Get Back</a><br>
-</div>
-</div>
+        <!-- <div><strong><span>Instructional:</span></strong> {{meal.instructions}}</div> -->
+        <!--Food dilemma-->
+        <div class="outerIntel">
+            <div class="intel">
+                <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
+                <p><span>Add the following ingredients:</span></p>
+                <div *ngIf="meal.measure1"> {{meal.measure1}} {{meal.ingredient1}}</div>
+                <div *ngIf="meal.measure2"> {{meal.measure2}} {{meal.ingredient2}}</div>
+                <div *ngIf="meal.measure3"> {{meal.measure3}} {{meal.ingredient3}}</div>
+                <div *ngIf="meal.measure4"> {{meal.measure4}} {{meal.ingredient4}}</div>
+                <div *ngIf="meal.measure5"> {{meal.measure5}} {{meal.ingredient5}}</div>
+                <div *ngIf="meal.measure6"> {{meal.measure6}} {{meal.ingredient6}}</div>
+                <div *ngIf="meal.measure7"> {{meal.measure7}} {{meal.ingredient7}}</div>
+                <div *ngIf="meal.measure8"> {{meal.measure8}} {{meal.ingredient8}}</div>
+                <div *ngIf="meal.measure9"> {{meal.measure9}} {{meal.ingredient9}}</div>
+                <div *ngIf="meal.measure10"> {{meal.measure10}} {{meal.ingredient10}}</div>
+                <div *ngIf="meal.measure11"> {{meal.measure11}} {{meal.ingredient11}}</div>
+                <div *ngIf="meal.measure12"> {{meal.measure12}} {{meal.ingredient12}}</div>
+                <div *ngIf="meal.measure13"> {{meal.measure13}} {{meal.ingredient13}}</div>
+                <div *ngIf="meal.measure14"> {{meal.measure14}} {{meal.ingredient14}}</div>
+                <div *ngIf="meal.measure15"> {{meal.measure15}} {{meal.ingredient15}}</div>
+                <div *ngIf="meal.measure16"> {{meal.measure16}} {{meal.ingredient16}}</div>
+                <div *ngIf="meal.measure17"> {{meal.measure17}} {{meal.ingredient17}}</div>
+                <div *ngIf="meal.measure18"> {{meal.measure18}} {{meal.ingredient18}}</div>
+                <div *ngIf="meal.measure19"> {{meal.measure19}} {{meal.ingredient19}}</div>
+                <div *ngIf="meal.measure20"> {{meal.measure20}} {{meal.ingredient20}}</div>
+                <div class="picture">
+                    <img class="cocktail-image" src="{{meal.image}}" width="100" height="100" alt="Good food">
+                </div>
+            </div>
+            <a routerLink='/random-list' routerLinkActive="active" class="newButton">Go Back</a><br>
 
+        </div>
+        <p class="front">&copy;{{title | uppercase}}</p>
+        <div class="pair">
+            <h1>Paired With</h1>
+        </div>
+        <div class="styles">
+            <app-random-list></app-random-list>
+        </div>
+    </div>
+
+</div>

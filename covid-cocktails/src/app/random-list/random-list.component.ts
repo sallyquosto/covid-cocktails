@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RandomListComponent implements OnInit {
   cocktails: Cocktail[] = []
-    title = 'covid cocktails';
+  title = 'covid cocktails';
+  // Dark: boolean = true;
 
 
 

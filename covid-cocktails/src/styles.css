@@ -10,13 +10,11 @@
 
 html, body {
     height: 100%;
-    /* padding: .5em; */
     max-width: 100%;
     min-height: 100%;
     margin: auto;
     background-color: white;
     scroll-behavior: smooth;
-    /* position: relative; */
 }
 
 header {

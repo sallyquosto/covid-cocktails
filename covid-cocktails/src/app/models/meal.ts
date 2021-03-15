@@ -1,4 +1,6 @@
 export interface Meal {
+    title: string;
+    type: string;
     id: string;
     meal: string;
     category: string;
@@ -7,21 +9,13 @@ export interface Meal {
     image: string;
     tags: string;
     measure1: any;
-    ingredient1: string;
     measure2: any;
-    ingredient2: string;
     measure3: any;
-    ingredient3: string;
     measure4: any;
-    ingredient4: string;
     measure5: any;
-    ingredient5: string;
     measure6: any;
-    ingredient6: string;
     measure7: any;
-    ingredient7: string;
     measure8: any;
-    ingredient8: string;
     measure9: any;
     measure10: any;
     measure11: any;
@@ -30,6 +24,18 @@ export interface Meal {
     measure14: any;
     measure15: any;
     measure16: any;
+    measure17: any;
+    measure18: any;
+    measure19: any;
+    measure20: any;
+    ingredient1: string;
+    ingredient2: string;
+    ingredient3: string;
+    ingredient4: string;
+    ingredient5: string;
+    ingredient6: string;
+    ingredient7: string;
+    ingredient8: string;
     ingredient9: string;
     ingredient10: string;
     ingredient11: string;
@@ -38,4 +44,8 @@ export interface Meal {
     ingredient14: string;
     ingredient15: string;
     ingredient16: string;
+    ingredient17: string;
+    ingredient18: string;
+    ingredient19: string;
+    ingredient20: string;
 }

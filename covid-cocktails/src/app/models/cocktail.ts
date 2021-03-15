@@ -38,3 +38,8 @@ export interface Cocktail {
     image: string
 
 }
+
+export interface CocktailGroup {
+  groupId: number;
+  Cocktails: Cocktail[];
+}

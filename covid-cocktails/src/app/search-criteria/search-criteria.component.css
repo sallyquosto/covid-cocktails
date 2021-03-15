@@ -37,19 +37,16 @@ button {
         padding: 10px;
         text-align: center;
         display: flex;
+        justify-content: space-around;
     }
 
     .drink-search {
         text-align: center;
-        margin-left: 50px;
-    }
-
-    label {
-        padding-left: 10px;
     }
 
     h3 {
         text-align: center;
         margin-top: 7px;
+        padding-right: 10px;
     }
 }

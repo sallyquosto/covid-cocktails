@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +24,11 @@ header {
     justify-content: center;
 }
 
-.container {
+.app-container {
     min-height: 100%;
+    min-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .main {
@@ -183,5 +188,4 @@ footer {
         text-decoration: none;
         color: #6C8CBF;
     }
-
 }

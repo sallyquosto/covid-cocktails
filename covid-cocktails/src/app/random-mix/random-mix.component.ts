@@ -28,7 +28,7 @@ export class RandomMixComponent implements OnInit {
           type: meal.strCategory,
           area: meal.strArea,
           instructions: meal.strInstructions,
-          measure1: meal.strMeasure1,
+          measure1: meal.strMeasure1.trim() ?meal.strMeasure15:null,
           measure2: meal.strMeasure2,
           measure3: meal.strMeasure3,
           measure4: meal.strMeasure4,

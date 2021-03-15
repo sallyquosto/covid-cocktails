@@ -29,7 +29,7 @@ export interface Meal {
     measure12: any;
     measure13: any;
     measure14: any;
-    measure15: any;
+    measure15: any | null;
     ingredient9: string;
     ingredient10: string;
     ingredient11: string;

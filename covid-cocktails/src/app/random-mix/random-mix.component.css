@@ -85,7 +85,7 @@ span {
 }
 /*This is where the flip Instructions animation begin*/
 .flipCard {
-  -webkit-perspective: 800;
+  /* -webkit-perspective: 800; */
    /* width: 300px; */
    height: 150px;
    position: relative;

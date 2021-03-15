@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 import { CocktailsService } from '../cocktails.service';
-import { Cocktail } from '../models/cocktail';
+import { Cocktail, CocktailGroup } from '../models/cocktail';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Cocktail } from '../models/cocktail';
 })
 export class PopularListComponent implements OnInit {
   cocktails: Cocktail[] = []
+  groups: CocktailGroup[] = []
   selectedCocktail?: any;
 
   constructor(private cocktailsservice: CocktailsService) { }
@@ -22,20 +24,61 @@ export class PopularListComponent implements OnInit {
           category: drink.strCategory,
           alcoholic: drink.strAlcoholic,
           instructions: drink.strInstructions,
-          image: drink.strDrinkThumb
+          image: drink.strDrinkThumb,
+          measure1: drink.strMeasure1,
+            measure2: drink.strMeasure2,
+            measure3: drink.strMeasure3,
+            measure4: drink.strMeasure4,
+            measure5: drink.strMeasure5,
+            measure6: drink.strMeasure6,
+            measure7: drink.strMeasure7,
+            measure8: drink.strMeasure8,
+            measure9: drink.strMeasure9,
+            measure10: drink.strMeasure10,
+            measure11: drink.strMeasure11,
+            measure12: drink.strMeasure12,
+            measure13: drink.strMeasure13,
+            measure14: drink.strMeasure14,
+            measure15: drink.strMeasure15,
+            ingredient1: drink.strIngredient1,
+            ingredient2: drink.strIngredient2,
+            ingredient3: drink.strIngredient3,
+            ingredient4: drink.strIngredient4,
+            ingredient5: drink.strIngredient5,
+            ingredient6: drink.strIngredient6,
+            ingredient7: drink.strIngredient7,
+            ingredient8: drink.strIngredient8,
+            ingredient9: drink.strIngredient9,
+            ingredient10: drink.strIngredient10,
+            ingredient11: drink.strIngredient11,
+            ingredient12: drink.strIngredient12,
+            ingredient13: drink.strIngredient13,
+            ingredient14: drink.strIngredient14,
+            ingredient15: drink.strIngredient15,
         }
       });
       // console.log(this.cocktails);
+      this.populateCocktailGroups();
     })
+  }
 
-}
-onSelect(cocktail: any) {
-  this.selectedCocktail = cocktail;
-}
+  // carousel images to display 4 at a time
+  populateCocktailGroups(): void {
+    let counter = 1;
+    for (let index = 0; index < this.cocktails.length; index += 4) {
+        let group = this.cocktails.slice(index, index + 4)
+        this.groups.push(<CocktailGroup>{Cocktails: group, groupId: counter})
+        counter++;
+    }
 
-closePopup() {
-  this.selectedCocktail = null;
-}
+    console.log(this.groups);
+  }
 
+  onSelect(cocktail: any) {
+    this.selectedCocktail = cocktail;
+  }
 
+  closePopup() {
+    this.selectedCocktail = null;
+  }
 }

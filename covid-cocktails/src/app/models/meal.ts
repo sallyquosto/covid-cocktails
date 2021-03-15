@@ -7,6 +7,7 @@ export interface Meal {
     area: string;
     instructions: string;
     image: string;
+    tags: string;
     measure1: any;
     measure2: any;
     measure3: any;

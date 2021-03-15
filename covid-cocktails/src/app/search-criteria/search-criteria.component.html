@@ -2,10 +2,9 @@
   <div class="drink-search">
     <label for="text">Search by Name</label>
     <input type="text" #drink />
-    <button (click)="searchCocktail(drink.value)"><i class="fas fa-arrow-right"></i></button>
+    <button mat-icon-button (click)="searchCocktail(drink.value)"><i class="fas fa-arrow-right"></i></button>
   </div>
   
-
   <h3>OR</h3>
 
   <div class="ingredient">
@@ -20,7 +19,7 @@
           {{ i.strIngredient1 }}
         </option>
       </select>
-      <button><i class="fas fa-arrow-right"></i></button>
+      <button mat-icon-button><i class="fas fa-arrow-right"></i></button>
     </form>
   </div>
   <form #glassForm="ngForm" (submit)="searchByGlass(glassForm.value)">
@@ -31,7 +30,7 @@
         {{ g.strGlass }}
       </option>
     </select>
-    <button><i class="fas fa-arrow-right"></i></button>
+    <button mat-icon-button ><i class="fas fa-arrow-right"></i></button>
   </form>
   <div class="alcoholic">
     <form
@@ -44,7 +43,7 @@
           {{ a.strAlcoholic }}
         </option>
       </select>
-      <button><i class="fas fa-arrow-right"></i></button>
+      <button mat-icon-button ><i class="fas fa-arrow-right"></i></button>
     </form>
   </div>
 </div>

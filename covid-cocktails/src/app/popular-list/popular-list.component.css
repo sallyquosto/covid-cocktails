@@ -1,4 +1,4 @@
-.carousel {
+.mobile-display {
     display: flex;
     flex-wrap: wrap;
     overflow-x: hidden; 
@@ -27,18 +27,187 @@ h1 {
 h2 {
     justify-content: space-between;
     text-align: center; 
-    padding: 0px;
-    margin: 0px;
     font-size: 15px;
-}
-
-.name {
     color: #fff;
     text-shadow: #343a40 2px 2px;
     background: rgb(5 6 5 / 30%);
     position: relative;
     top: -54px;
-    width: 83%;
+    width: 85%;
     left: 15px;
 }
 
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 10, 12, 0.9);
+    height: 100vh;
+    width: 100%;
+    z-index: +1;
+  }
+
+  .popup-boxes {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: +1;
+    width: auto;
+    height: auto;
+    color: white;
+    background-color: #111419;
+    border-radius: 10px;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll!important;
+  }
+
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    height: auto;
+    padding: 3px;
+    margin-top: 5px;
+    text-align: center; 
+  }
+
+  #details-close-btn {
+      display: flex;
+      align-items: center;
+  }
+
+  .carousel {	
+    margin: 0 auto;
+    padding: 0 68px;
+  }
+  .carousel .carousel-item {
+    text-align: center;
+    overflow: hidden;
+  }
+  .carousel .carousel-item .img-box {
+    background: #fff;
+    padding: 9px;
+    box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+  }
+  .carousel .carousel-item img {
+    margin: 0 auto;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 100px;
+    background: none;
+  }
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin-top: -15px;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+  }
+  .carousel-indicators {
+    bottom: -40px;
+  }
+  .carousel-indicators li, .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    margin: 1px 4px;
+    box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+  }
+  .carousel-indicators li {	
+    background: #999;
+    border-color: transparent;
+  }
+  .carousel-indicators li.active {
+    background: #555;
+  }
+
+  .desktop-cocktail-img {
+    height: 182px;
+    width: 132px;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+
+/* media query for tablet size */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 1000px) {
+  .mobile-display {
+    display: none;
+  }
+
+  .desktop-view{
+    display: flex;
+  }
+
+  h2 {
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-shadow: #343a40 2px 2px;
+    background: rgb(5 6 5 / 30%);
+    position: relative;
+    top: -32px;
+    width: 100%;
+    left: 0px;
+  }
+
+  .desktop-view {
+    margin-top: 20px;
+  }
+  
+  .desktop-cocktail-img {
+    height: 280px;
+    width: 230px;
+  }
+  .img-box {
+    height:300px;
+    width:250px;
+    margin: 15px;
+    position: relative;
+    box-shadow: 5px 5px 5px;
+  }
+  div#myCarousel {
+    margin: 65px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    background: rgb(5 6 5 / 50%);
+    margin-top: 20px;
+  }
+}

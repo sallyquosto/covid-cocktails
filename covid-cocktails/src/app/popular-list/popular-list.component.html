@@ -1,14 +1,51 @@
 
 <!-- <p>popular-list works!</p> -->
 <h1>POPULAR DRINKS</h1>
-<div class="carousel" *ngIf="cocktails">
+<div class="mobile-display" *ngIf="cocktails">
     <div *ngFor="let cocktail of cocktails">
         <img class="cocktail-image" src="{{cocktail.image}}" (click)="onSelect(cocktail)">
-        <div class="name">
-            <h2>{{cocktail.name}}</h2>
-        </div>
+        <h2>{{cocktail.name}}</h2>
     </div>
 </div>
+
+<!-- <button type="button" class="btn btn-dark">Dark</button> -->
+<body>
+    <div class="desktop-view">
+        <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel"
+                        *ngFor="let group of groups"
+                        [attr.data-slide-to]="this.group.groupId - 1"
+                        [ngClass]="{'active': group.groupId === 1}"></li>
+                    </ol>   
+             
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item" [ngClass]="{'active': group.groupId === 1}" *ngFor="let group of groups">
+                            <div class="row">
+                                <div class="col-sm-3" *ngFor="let cocktail of group.Cocktails">
+                                    <div class="img-box">
+                                        <img class="desktop-cocktail-img" src="{{cocktail.image}}" (click)="onSelect(cocktail)" alt="">
+                                        <h2 class="name">{{cocktail.name}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+        </div>
+    </div>
+    </body>
 
 <div *ngIf="selectedCocktail">
     <div class="popup-overlay">

@@ -24,3 +24,29 @@ button {
     padding: 10px;
     text-align: center;
 }
+
+/* media query for tablet size */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 1000px) {
+    .search-portion {
+        background-color: #bac94a;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .drink-search {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        margin-top: 7px;
+        padding-right: 10px;
+    }
+}

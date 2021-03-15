@@ -42,6 +42,8 @@ h2 {
   }
 
   .popup-boxes {
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,6 +77,18 @@ h2 {
     padding: 3px;
     margin-top: 5px;
     text-align: center; 
+  }
+
+  .ingredients {
+    display: flex;
+  }
+
+  .measurement {
+    flex: 1;
+  }
+
+  .ing {
+    margin-left: 3px;
   }
 
   #details-close-btn {

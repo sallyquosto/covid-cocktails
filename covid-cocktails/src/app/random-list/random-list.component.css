@@ -18,6 +18,20 @@
   margin-bottom: 20px;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* font-size: 25px; */
+  align-self: center;
+}
+
+.insideTitle {
+  display: flex;
+  padding: 5px;
+  font-size: 20px;
+}
+
 a.newButton {
   /* background-color: #e2d36b; */
   width: auto;
@@ -82,32 +96,22 @@ a.newButton {
 
 span {
   text-decoration: underline;
+  padding: 5px;
 }
 
 .flipCard {
-  -webkit-perspective: 800;
-   /* width: 300px; */
+  perspective: 800;
    height: 150px;
    position: relative;
    margin: 50px auto;
 }
 .flipCard .card.flipped {
   transform:rotatey(-180deg);
-  -ms-transform:rotatey(-180deg); /* IE 9 */
-  -moz-transform:rotatey(-180deg); /* Firefox */
-  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
 }
+
 .flipCard .card {
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
-  -moz-transform-style: preserve-3d;
-  -moz-transition: 0.5s;
-  -ms-transform-style: preserve-3d;
-  -ms-transition: 0.5s;
-  -o-transform-style: preserve-3d;
-  -o-transition: 0.5s;
   transform-style: preserve-3d;
   transition: 0.5s;
 }
@@ -120,10 +124,6 @@ span {
   box-sizing: border-box;
   z-index: 2;
   backface-visibility: hidden;  /* W3C */
-  -webkit-backface-visibility: hidden; /* Safari & Chrome */
-  -moz-backface-visibility: hidden; /* Firefox */
-  -ms-backface-visibility: hidden; /* Internet Explorer */
-  -o-backface-visibility: hidden; /* Opera */
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
   overflow: auto;
 }
@@ -131,10 +131,6 @@ span {
   background: white;
   color: black;
   transform:rotatey(-180deg);
-  -ms-transform:rotatey(-180deg); /* IE 9 */
-  -moz-transform:rotatey(-180deg); /* Firefox */
-  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-  -o-transform:rotatey(-180deg); /* Opera */
 }
 
 .flipCard .card .front {
@@ -153,16 +149,7 @@ span {
   padding-top: 15px;
 }
 
-/* .dark {
-  background-color: #5AA7A7;
-}
-
-.light {
-  background-color: #E2D36B;
-} */
-
-/*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */
-/*Designing for ipad starts here*/
+/*Designing for iPad starts here*/
 @media only screen and (min-width: 768px) {
   * {
     margin: 0;
@@ -264,4 +251,11 @@ span {
   .menu {
     width: 900px;
   }
+
+  p {
+    margin: 15px;
+  }
+  
 }
+
+/*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */

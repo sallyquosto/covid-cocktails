@@ -8,6 +8,10 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+.title {
+    font-size: 8px;
+}
+
 html, body {
     height: 100%;
     max-width: 100%;

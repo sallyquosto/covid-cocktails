@@ -28,8 +28,12 @@
 
 .insideTitle {
   display: flex;
-  padding: 5px;
+  padding: 3px;
   font-size: 20px;
+}
+
+span {
+  padding: 3px;
 }
 
 a.newButton {
@@ -94,11 +98,6 @@ a.newButton {
   margin: 0;
 }
 
-span {
-  text-decoration: underline;
-  padding: 5px;
-}
-
 .flipCard {
   perspective: 800;
    height: 150px;
@@ -123,7 +122,7 @@ span {
   position: absolute;
   box-sizing: border-box;
   z-index: 2;
-  backface-visibility: hidden;  /* W3C */
+  backface-visibility: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
   overflow: auto;
 }
@@ -163,7 +162,6 @@ span {
     max-width: 100%;
     min-height: 100%;
     margin: 0;
-    background-color: white;
     scroll-behavior: smooth;
   }
   .rand-1 {
@@ -187,7 +185,6 @@ span {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* font-size: 25px; */
     align-self: center;
   }
 
@@ -213,6 +210,7 @@ span {
 
   p {
     margin: 15px;
+    font-size: 40px;
   }
 
   .reload {
@@ -253,9 +251,12 @@ span {
   }
 
   p {
-    margin: 15px;
+    margin: 0;
   }
   
+  .reload {
+    margin-bottom: 30px;
+  }
 }
 
 /*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */

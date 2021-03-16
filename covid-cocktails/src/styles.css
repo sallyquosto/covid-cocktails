@@ -8,10 +8,6 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.title {
-    font-size: 8px;
-}
-
 html, body {
     height: 100%;
     max-width: 100%;
@@ -148,6 +144,7 @@ footer {
     display: none;
 }
 
+
 /*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */
 
 /* media query for tablet size */
@@ -189,5 +186,9 @@ footer {
         top: -30px;
         text-decoration: none;
         color: #6C8CBF;
+    }
+
+    .title {
+        font-size: 15px;
     }
 }

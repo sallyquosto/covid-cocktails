@@ -1,5 +1,4 @@
 a.newButton {
-  /* background-color: #e2d36b; */
   width: auto;
   height: auto;
   padding: 4px;
@@ -9,14 +8,23 @@ a.newButton {
   text-shadow: 1px 1px 2px white, 0 0 1em #6c8cbf, 0 0 0.2em #e2d36b;
 }
 
+.insideTitle {
+  padding: 5px;
+  font-size: 20px;
+}
+
 h1 {
   text-align: center;
   margin: 0;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+p {
+  margin: 15px;
 }
 
 .pair {
-  background-image: linear-gradient(#BAC94A, #96D7C6);
+  background-image: linear-gradient(#bac94a, #96d7c6);
   width: auto;
   height: auto;
   animation: glow 1s ease-in-out infinite alternate;
@@ -25,13 +33,15 @@ h1 {
 
 @keyframes pair {
   from {
-    text-shadow: 0 0 120px #fff, 0 0 120px #fff, 0 0 130px #BAC94A,
-      0 120px 140px #BAC94A, 0 0 150px #BAC94A, 0 0 160px #BAC94A, 0 0 170px #BAC94A;
+    text-shadow: 0 0 120px #fff, 0 0 120px #fff, 0 0 130px #bac94a,
+      0 120px 140px #bac94a, 0 0 150px #bac94a, 0 0 160px #bac94a,
+      0 0 170px #bac94a;
   }
 
   to {
-    text-shadow: 0 0 130px #fff, 0 0 130px #96D7C6, 0 0 140px #96D7C6,
-      0 120px 150px #96D7C6, 0 0 160px #96D7C6, 0 0 170px #96D7C6, 0 0 180px #96D7C6;
+    text-shadow: 0 0 130px #fff, 0 0 130px #96d7c6, 0 0 140px #96d7c6,
+      0 120px 150px #96d7c6, 0 0 160px #96d7c6, 0 0 170px #96d7c6,
+      0 0 180px #96d7c6;
   }
 }
 
@@ -41,7 +51,7 @@ h1 {
 }
 
 .food {
-  background: #BAC94A;
+  background: #bac94a;
   width: auto;
   /* text-align: left; */
   padding: 15px;
@@ -71,7 +81,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-.cocktail-image {
+.food-image {
   display: flex;
   border-radius: 4px;
   align-self: center;
@@ -80,37 +90,20 @@ h1 {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-span {
-  text-decoration: underline;
-}
+
 /*This is where the flip Instructions animation begin*/
 .flipCard {
-  -webkit-perspective: 800;
-  -ms-perspective: 800;
-  -moz-perspective: 800;
-  -moz-perspective: 800; 
-   width: 300px; 
-   height: 150px;
-   position: relative;
-   margin: 50px auto;
+  perspective: 800;
+  height: 150px;
+  position: relative;
+  margin: 50px auto;
 }
 .flipCard .card.flipped {
-  transform:rotatey(-180deg);
-  -ms-transform:rotatey(-180deg); /* IE 9 */
-  -moz-transform:rotatey(-180deg); /* Firefox */
-  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  transform: rotatey(-180deg);
 }
 .flipCard .card {
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
-  -moz-transform-style: preserve-3d;
-  -moz-transition: 0.5s;
-  -ms-transform-style: preserve-3d;
-  -ms-transition: 0.5s;
-  -o-transform-style: preserve-3d;
-  -o-transition: 0.5s;
   transform-style: preserve-3d;
   transition: 0.5s;
 }
@@ -122,33 +115,25 @@ span {
   position: absolute;
   box-sizing: border-box;
   z-index: 2;
-  backface-visibility: hidden;  /* W3C */
-  -webkit-backface-visibility: hidden; /* Safari & Chrome */
-  -moz-backface-visibility: hidden; /* Firefox */
-  -ms-backface-visibility: hidden; /* Internet Explorer */
-  -o-backface-visibility: hidden; /* Opera */
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  backface-visibility: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   overflow: auto;
 }
 .flipCard .card .back {
   background: white;
   color: black;
-  transform:rotatey(-180deg);
-  -ms-transform:rotatey(-180deg); /* IE 9 */
-  -moz-transform:rotatey(-180deg); /* Firefox */
-  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-  -o-transform:rotatey(-180deg); /* Opera */
+  transform: rotatey(-180deg);
 }
 
 .flipCard .card .front {
   text-align: center;
   line-height: 120px;
-  background-color: #BAC94A;
+  background-color: #bac94a;
   color: black;
   border-radius: 4px;
 }
 .flipCard .card .back {
-  background-color: #E2D36B;
+  background-color: #e2d36b;
   border: 3px solid white;
   text-align: center;
   color: black;
@@ -156,5 +141,77 @@ span {
   padding-top: 15px;
 }
 /*This is where the flip Instructions animation end*/
+@media only screen and (min-width: 768px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
 
+  html,
+  body {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .randContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15px;
+    height: auto;
+    align-self: center;
+  }
+
+  .food {
+    width: auto;
+  }
+
+  p {
+    margin: 15px;
+    font-size: 40px;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .insideTitle {
+    margin: 5px;
+    font-size: 30px;
+  }
+
+  .intel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .insideIntel {
+    padding: 5px;
+  }
+
+  a.newButton {
+    display: flex;
+    margin: 20px;
+    padding: 4px;
+    font-size: 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 1em #6c8cbf, 0 0 0.2em #e2d36b;
+  }
+
+  .food-image {
+    width: 300px;
+    height: 300px;
+  }
+
+}
 /*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */

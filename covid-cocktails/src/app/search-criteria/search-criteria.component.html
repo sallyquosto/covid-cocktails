@@ -1,9 +1,9 @@
 <div class="search-portion">
-  <div class="drink-search">
-    <label for="text">Search by Name</label>
-    <input type="text" #drink />
+    <mat-form-field class="example-full-width">
+      <mat-label>Search By Name</mat-label>
+      <input matInput placeholder="Ex. Martini" type="text" #drink />
+    </mat-form-field>
     <button mat-icon-button (click)="searchCocktail(drink.value)"><i class="fas fa-arrow-right"></i></button>
-  </div>
   
   <h3>OR</h3>
 
@@ -12,37 +12,37 @@
       #ingredientForm="ngForm"
       (submit)="searchByIngredients(ingredientForm.value)"
     >
-      <label for="ingredient">Search by Ingredients</label>
-      <select name="ingredient" id="ingredient" ngModel #ingredients>
-        <option value="" selected disabled hidden>Ingredients</option>
-        <option *ngFor="let i of ingredient" [value]="i.strIngredient1">
+      <!-- <mat-label for="ingredient">Search by Ingredients</mat-label> -->
+      <mat-select name="ingredient" id="ingredient" ngModel #ingredients>
+        <mat-option value="" selected disabled hidden>Click here for ingredients</mat-option>
+        <mat-option *ngFor="let i of ingredient" [value]="i.strIngredient1">
           {{ i.strIngredient1 }}
-        </option>
-      </select>
+        </mat-option>
+      </mat-select>
       <button mat-icon-button><i class="fas fa-arrow-right"></i></button>
     </form>
   </div>
   <form #glassForm="ngForm" (submit)="searchByGlass(glassForm.value)">
-    <label for="glass">Search by glass type</label>
-    <select name="glass" id="glass" ngModel>
-      <option value="" selected disabled hidden>Glass Type</option>
-      <option *ngFor="let g of glass" [value]="g.strGlass">
+    <!-- <mat-label for="glass">Search by glass type</mat-label> -->
+    <mat-select name="glass" id="glass" ngModel>
+      <mat-option value="" selected disabled hidden>Click here for glass types</mat-option>
+      <mat-option *ngFor="let g of glass" [value]="g.strGlass">
         {{ g.strGlass }}
-      </option>
-    </select>
+      </mat-option>
+    </mat-select>
     <button mat-icon-button ><i class="fas fa-arrow-right"></i></button>
   </form>
   <div class="alcoholic">
     <form
       #alcoholicForm="ngForm"
       (submit)="searchByAlcoholic(alcoholicForm.value)">
-      <label for="alcoholic">Alcoholic or Non-alcoholic?</label>
-      <select name="alcoholic" id="alcoholic" ngModel>
-        <option value="" selected disabled hidden>Alcoholic/Non-Alcholic</option>
-        <option *ngFor="let a of alcoholic" [value]="a.strAlcoholic">
+      <!-- <mat-label for="alcoholic">Alcoholic or Non-alcoholic?</mat-label> -->
+      <mat-select name="alcoholic" id="alcoholic" ngModel>
+        <mat-option value="" selected disabled hidden>Alcoholic or Non-alcoholic?</mat-option>
+        <mat-option *ngFor="let a of alcoholic" [value]="a.strAlcoholic">
           {{ a.strAlcoholic }}
-        </option>
-      </select>
+        </mat-option>
+      </mat-select>
       <button mat-icon-button ><i class="fas fa-arrow-right"></i></button>
     </form>
   </div>

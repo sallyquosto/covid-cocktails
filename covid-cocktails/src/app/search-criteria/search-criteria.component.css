@@ -25,6 +25,10 @@ button {
     text-align: center;
 }
 
+input {
+    cursor: text;
+}
+
 /* media query for tablet size */
 @media only screen and (min-width: 768px) {
     
@@ -48,5 +52,9 @@ button {
         text-align: center;
         margin-top: 7px;
         padding-right: 10px;
+    }
+
+    mat-select {
+        width: 150px;
     }
 }

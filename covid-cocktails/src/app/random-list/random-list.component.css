@@ -100,9 +100,7 @@ span {
 }
 
 .flipCard {
-  -webkit-perspective: 800;
-  -apple-perspective: 800;
-   /* width: 300px; */
+  perspective: 800;
    height: 150px;
    position: relative;
    margin: 50px auto;

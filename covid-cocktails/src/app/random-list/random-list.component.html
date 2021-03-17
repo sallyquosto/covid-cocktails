@@ -21,6 +21,7 @@
             <div class="intel">
                 <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
                 <p><span>Add the following ingredients:</span></p>
+            <div class="space">
                 <div class="insideIntel" *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
                 <div class="insideIntel" *ngIf="cocktail.measure2"> {{cocktail.measure2}} of {{cocktail.ingredient2}}</div>
                 <div class="insideIntel" *ngIf="cocktail.measure3"> {{cocktail.measure3}} of {{cocktail.ingredient3}}</div>
@@ -29,6 +30,7 @@
                 <div class="insideIntel" *ngIf="cocktail.measure6"> {{cocktail.measure6}} of {{cocktail.ingredient6}}</div>
                 <div class="insideIntel" *ngIf="cocktail.measure7"> {{cocktail.measure7}} of {{cocktail.ingredient7}}</div>
                 <div class="insideIntel" *ngIf="cocktail.measure8"> {{cocktail.measure8}} of {{cocktail.ingredient8}}</div>
+            </div>
                 <div class="picture">
                     <img class="cocktail-image" src="{{cocktail.image}}" width="100" height="100"
                         alt="picture of alcoholic beverage">

@@ -191,6 +191,11 @@ p {
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 20px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .front {
+    font-size: 30px;
   }
 
   .insideIntel {
@@ -211,6 +216,15 @@ p {
   .food-image {
     width: 300px;
     height: 300px;
+  }
+
+  .huge {
+    font-size: 40px;
+  }
+
+  .styles {
+    padding: 50px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
 }

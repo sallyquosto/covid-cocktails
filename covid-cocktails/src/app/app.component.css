@@ -4,7 +4,49 @@
     margin-bottom: 10px;
 }
 
-a   {
-    color: #5AA7a7;
+.covid {
+   display: flex;
+   justify-content: center;
+}
+
+
+
+  @media only screen and (min-width: 768px) { 
+      
+    a   {
+        color: #5AA7a7;
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        text-decoration: none;
+        background-color:  #5AA7a7;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .covid {
+          margin-left: 10px;
+      }
+}
+
+@media only screen and (min-width: 1000px) { 
+    a   {
+        color: #5AA7a7;
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        text-decoration: none;
+        background-color:  #5AA7a7;
+        color: white;
+        padding: 1px 10px;
+        border-radius: 5px;
+      }
+
+      .covid {
+        margin-left: 10px;
+    }
 }
 

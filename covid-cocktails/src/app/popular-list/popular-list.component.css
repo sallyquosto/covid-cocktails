@@ -18,9 +18,9 @@
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
-    background: #bac94a;
+    /* background: #bac94a; */
     margin: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -37,6 +37,12 @@ h2 {
     width: 85%;
     left: 15px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.pop-cocktail {
+  background: linear-gradient(to left bottom, #96d7c6, #bac94a, #e2d36b);
+  padding: 10px;
+  margin: 5px;
 }
 
 img {
@@ -115,8 +121,9 @@ img {
   }
 
   .carousel-control-prev, .carousel-control-next {
-    width: 100px;
+    position: absolute;
     background: none;
+    margin: -100px;
   }
   .carousel-control-prev i, .carousel-control-next i {
     font-size: 28px;
@@ -193,7 +200,7 @@ img {
   
   .desktop-cocktail-img {
     height: 280px;
-    width: 230px;
+    width: 100%;
   }
   .img-box {
     height:280px;

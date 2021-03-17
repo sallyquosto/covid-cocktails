@@ -110,3 +110,29 @@ h2 {
       
 
   }
+
+  @media only screen and (min-width: 1000px) { 
+    .popup-boxes {
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      z-index: +1;
+      width: auto;
+      height: auto;
+      color: white;
+      background-color: #111419;
+      border-radius: 10px;
+      max-height: auto;
+      height: auto;
+      overflow-y: scroll!important;
+    }
+    .popup-overlay{
+      position: fixed;
+      top: 50;
+      left: 50;
+      background-color: rgba(8, 10, 12, 0.9);
+      height: 100vh;
+      width: 100%;
+      z-index: +1;
+    }
+  }

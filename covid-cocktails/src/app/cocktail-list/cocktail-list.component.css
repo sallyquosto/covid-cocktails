@@ -91,6 +91,16 @@ h2 {
     margin-left: 3px;
   }
 
+  .returnButton {
+    display: flex;
+    justify-content: center;
+    background-color: #5AA7A7;
+    border: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
   #details-close-btn {
       display: flex;
       align-items: center;

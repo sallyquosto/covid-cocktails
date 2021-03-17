@@ -88,10 +88,12 @@ a {
     transition-duration: 2s;
     cursor: pointer;
     outline: none;
+    margin: 5px;
 }
 
 .dropdown:hover button {
     background-color: #E2D36B;
+    
 }
 
 .dropdown div {

@@ -18,9 +18,9 @@
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    background: rgb(5 6 5 / 50%);
+    background: #bac94a;
     margin: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -207,7 +207,7 @@ img {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 35px;
     text-align: center;
     background: none;
     top: 50px;

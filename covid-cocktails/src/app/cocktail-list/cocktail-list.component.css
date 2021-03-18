@@ -91,7 +91,7 @@ h2 {
     margin-left: 3px;
   }
 
-  .returnButton {
+  .search-again-btn {
     display: flex;
     justify-content: center;
     background-color: #5AA7A7;
@@ -99,14 +99,56 @@ h2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     padding: 8px 20px;
     border-radius: 15px;
+    width: 50%;
+    margin-left: 25%;
+}
+.search-again-btn:hover {
+  background-color: #96d7c6;
 }
 
   #details-close-btn {
       display: flex;
       align-items: center;
   }
+  @media only screen and (min-width: 768px) {
+    .search-again-btn {
+      display: flex;
+      justify-content: center;
+      background-color: #5AA7A7;
+      border: none;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      padding: 8px 20px;
+      border-radius: 15px;
+      width: 15%;
+      margin-left: 80%;
+  }
+  
+  }
 
-  @media only screen and (min-width: 768px) { 
+  @media only screen and (min-width: 1000px) {
+    .popup-boxes {
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 75%);
+      z-index: +1;
+      width: auto;
+      height: auto;
+      color: white;
+      background-color: #111419;
+      border-radius: 10px;
+      max-height: auto;
+      height: auto;
+      overflow-y: scroll!important;
+    }
+    .popup-overlay{
+      position: fixed;
+      top: 50;
+      left: 50;
+      background-color: rgba(8, 10, 12, 0.9);
+      height: 100vh;
+      width: 100%;
+      z-index: +1;
+    }
       
 
   }
@@ -135,4 +177,15 @@ h2 {
       width: 100%;
       z-index: +1;
     }
+    .search-again-btn {
+      display: flex;
+      justify-content: center;
+      background-color: #5AA7A7;
+      border: none;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      padding: 8px 20px;
+      border-radius: 15px;
+      width: 10%;
+      margin-left: 85%;
+  }
   }

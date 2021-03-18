@@ -12,7 +12,7 @@
             </div>
         </div> -->
         <button (click)="toggleInstructionsIf()">Cooking Instructions Here</button>
-            <div *ngIf="!isShowDivIf">
+            <div *ngIf="!isShowDivIf" class="myInstruction">
                 <div class="popUp">
                     <div class="insidePop">{{meal.instructions}}</div>
                     <div class="close">

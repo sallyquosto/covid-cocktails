@@ -178,6 +178,7 @@ a.newButton {
 }
 
 .insidePop {
+  margin: 20px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -188,8 +189,8 @@ a.newButton {
   text-align: justify;
   text-justify: auto;
   background-color: #96D7C6;
-  width: 300px;
-  height: 500px;
+  width: auto;
+  height: 90vh;
   border-radius: 4px;
 }
 

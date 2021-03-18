@@ -18,7 +18,7 @@
                     <div class="side back"><strong><span>The Details:</span></strong> {{cocktail.instructions}}</div>
                 </div>
             </div> -->
-            <button (click)="toggleInstructionsIf()">Bartender Instructions Here</button>
+            <button (click)="toggleInstructionsIf()" class="myInstruction">Bartender Instructions Here</button>
             <div *ngIf="!isShowDivIf">
                 <div class="popUp">
                     <div class="insidePop">{{cocktail.instructions}}</div>

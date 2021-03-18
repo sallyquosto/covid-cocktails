@@ -1,10 +1,12 @@
 <div class="search-portion">
-    <mat-form-field class="example-full-width">
-      <mat-label>Search By Name</mat-label>
-      <input matInput placeholder="Ex. Martini" type="text" #drink />
-    </mat-form-field>
-    <button mat-icon-button (click)="searchCocktail(drink.value)"><i class="fas fa-search"></i></button>
-  
+    <div class="search-by-name">
+      <mat-form-field class="example-full-width">
+        <mat-label>Search By Name</mat-label>
+        <input matInput placeholder="Ex. Martini" type="text" #drink />
+      </mat-form-field>
+      <button mat-icon-button (click)="searchCocktail(drink.value)"><i class="fas fa-search"></i></button>
+    </div>
+      
   <h3>OR</h3>
 
   <div class="ingredient">

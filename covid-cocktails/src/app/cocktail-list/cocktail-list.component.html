@@ -1,14 +1,18 @@
-<div class="return"><button class="returnButton" (click)="navHome()">Search Again</button></div>
-<div class="cocktail-list">
-  <div *ngFor="let cocktail of cocktails">
-    <div class="name">
-      <h2>{{ cocktail.name }}</h2>
+<div class="list-wrapper">
+  <div class="search-btn-wrapper">
+    <button class="search-again-btn" (click)="navHome()">Search Again</button>
+  </div>
+  <div class="cocktail-list">
+    <div *ngFor="let cocktail of cocktails">
+      <div class="name">
+        <h2>{{ cocktail.name }}</h2>
+      </div>
+      <img
+        class="cocktail-image"
+        src="{{ cocktail.image }}"
+        (click)="onSelect(cocktail)"
+      />
     </div>
-    <img
-      class="cocktail-image"
-      src="{{ cocktail.image }}"
-      (click)="onSelect(cocktail)"
-    />
   </div>
 </div>
 <div *ngIf="selectedCocktail">

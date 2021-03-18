@@ -29,6 +29,7 @@ export class CocktailsService {
   getRandom = (): any => {
     return this.http.get(this.randomURL)
   }
+  
   getCocktailbyGlass(g: string) {
     return this.http.get(`${this.filterGlassURL}${g}`);
   }

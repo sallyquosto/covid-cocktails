@@ -20,6 +20,12 @@ export class RandomMixComponent implements OnInit {
     public router: Router
   ) { }
 
+  isShowDivIf = true;
+
+  toggleInstructionsIf() {
+    this.isShowDivIf = !this.isShowDivIf;
+  }
+
   ngOnInit(): void {
     this.mealsservice.getMealz().subscribe((data: any) => {
       this.meals = data.meals.map((meal: any) => {

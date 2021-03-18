@@ -12,23 +12,42 @@
                 <div class="insideTitle"><strong><span>Category:</span><br></strong> {{cocktail.category}}</div>
                 <div class="insideTitle"><strong><span>Alcohol or DD:</span><br></strong> {{cocktail.alcoholic}}</div>
             </div>
-            <div class="flipCard">
+            <!-- <div class="flipCard">
                 <div class="card" onclick="this.classList.toggle('flipped');">
                     <div class="side front">Click for Mixing Instructions</div>
                     <div class="side back"><strong><span>The Details:</span></strong> {{cocktail.instructions}}</div>
+                </div>
+            </div> -->
+            <button (click)="toggleInstructionsIf()">Bartender Instructions Here</button>
+            <div *ngIf="!isShowDivIf">
+                <div class="popUp">
+                    <div class="insidePop">{{cocktail.instructions}}</div>
+                    <div class="close">
+                        <i class="fas fa-times-circle" (click)="toggleInstructionsIf()"></i>
+                    </div>
                 </div>
             </div>
             <div class="intel">
                 <!-- the ngIf directive hides the element if it is null ... this was done so 'of' wouldn't show-->
                 <p><span>Add the following ingredients:</span></p>
-                <div class="insideIntel" *ngIf="cocktail.measure1"> {{cocktail.measure1}} of {{cocktail.ingredient1}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure2"> {{cocktail.measure2}} of {{cocktail.ingredient2}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure3"> {{cocktail.measure3}} of {{cocktail.ingredient3}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure4"> {{cocktail.measure4}} of {{cocktail.ingredient4}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure5"> {{cocktail.measure5}} of {{cocktail.ingredient5}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure6"> {{cocktail.measure6}} of {{cocktail.ingredient6}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure7"> {{cocktail.measure7}} of {{cocktail.ingredient7}}</div>
-                <div class="insideIntel" *ngIf="cocktail.measure8"> {{cocktail.measure8}} of {{cocktail.ingredient8}}</div>
+                <div class="space">
+                    <div class="insideIntel" *ngIf="cocktail.measure1"> {{cocktail.measure1}} of
+                        {{cocktail.ingredient1}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure2"> {{cocktail.measure2}} of
+                        {{cocktail.ingredient2}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure3"> {{cocktail.measure3}} of
+                        {{cocktail.ingredient3}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure4"> {{cocktail.measure4}} of
+                        {{cocktail.ingredient4}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure5"> {{cocktail.measure5}} of
+                        {{cocktail.ingredient5}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure6"> {{cocktail.measure6}} of
+                        {{cocktail.ingredient6}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure7"> {{cocktail.measure7}} of
+                        {{cocktail.ingredient7}}</div>
+                    <div class="insideIntel" *ngIf="cocktail.measure8"> {{cocktail.measure8}} of
+                        {{cocktail.ingredient8}}</div>
+                </div>
                 <div class="picture">
                     <img class="cocktail-image" src="{{cocktail.image}}" width="100" height="100"
                         alt="picture of alcoholic beverage">

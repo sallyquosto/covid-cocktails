@@ -21,6 +21,14 @@ export class RandomListComponent implements OnInit {
     public router: Router
   ) { }
 
+  isShowDivIf = true;
+
+  toggleInstructionsIf() {
+    this.isShowDivIf = !this.isShowDivIf;
+  }
+
+ 
+
   ngOnInit(): void {
     this.cocktailservice.getRandom().subscribe((data: any) => {
       this.cocktails = data.drinks.map((drink: any) => {

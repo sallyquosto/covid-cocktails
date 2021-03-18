@@ -5,12 +5,21 @@
             <div class="insideTitle"><strong><span>Category:</span></strong> {{meal.type}}</div>
             <div class="insideTitle"><strong><span>Origin:</span></strong> {{meal.area}}</div>
         </div>
-        <div class="flipCard">
+        <!-- <div class="flipCard">
             <div class="card" onclick="this.classList.toggle('flipped');">
                 <div class="side front">Click for Cooking Instructions</div>
                 <div class="side back"><strong><span>The Details:</span></strong> {{meal.instructions}}</div>
             </div>
-        </div>
+        </div> -->
+        <button (click)="toggleInstructionsIf()">Cooking Instructions Here</button>
+            <div *ngIf="!isShowDivIf">
+                <div class="popUp">
+                    <div class="insidePop">{{meal.instructions}}</div>
+                    <div class="close">
+                        <i class="fas fa-times-circle" (click)="toggleInstructionsIf()"></i>
+                    </div>
+                </div>
+            </div>
         <!-- <div><strong><span>Instructional:</span></strong> {{meal.instructions}}</div> -->
         <!--Food dilemma-->
         <div class="outerIntel">

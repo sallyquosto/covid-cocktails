@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
 import { CocktailsService } from '../cocktails.service';
 import { Cocktail, CocktailGroup } from '../models/cocktail';
 

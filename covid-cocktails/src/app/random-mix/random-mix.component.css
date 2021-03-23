@@ -157,7 +157,7 @@ i {
 }
 
 /*This is where the flip Instructions animation end*/
-@media only screen and (min-width: 768px) and (max-width:1024px) {
+@media only screen and (min-width: 768px) {
   *{
     margin: 0;
     padding: 0;
@@ -170,10 +170,6 @@ i {
     max-width: 100%;
     min-height: 100%;
     margin: 0;
-  }
-
-  .insidePop {
-    width: 700px;
   }
 
   .randContainer {
@@ -201,6 +197,10 @@ i {
   .insideTitle {
     margin: 5px;
     font-size: 30px;
+  }
+
+  .insidePop {
+    width: 700px;
   }
 
   .outerIntel {
@@ -256,4 +256,12 @@ i {
   }
 
 }
+
+@media only screen and (min-width: 1024px) {
+
+  .insidePop {
+    width: 900px;
+  }
+}
+
 /*color palette #5AA7A7 : #96D7C6 : #BAC94A : #E2D36B : #6C8CBF */

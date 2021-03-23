@@ -163,6 +163,7 @@ h2 {
       max-height: auto;
       height: auto;
       overflow-y: scroll!important;
+      font-size: 20px;
     }
     .popup-overlay{
       position: fixed;

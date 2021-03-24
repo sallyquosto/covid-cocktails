@@ -106,10 +106,12 @@ h2 {
   background-color: #96d7c6;
 }
 
-  #details-close-btn {
-      display: flex;
-      align-items: center;
-  }
+#details-close-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 3px;
+}
   @media only screen and (min-width: 768px) {
     img {
       height: 300px;
@@ -158,7 +160,7 @@ h2 {
       height: 300px;
       width: 250px;
     }
-    
+
     .popup-boxes {
       position: fixed;
       left: 50%;

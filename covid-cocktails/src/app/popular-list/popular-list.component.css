@@ -283,7 +283,7 @@ img {
   .popup-boxes {
     position: fixed;
     left: 50%;
-    transform: translate(-50%, 40%);
+    transform: translate(-50%, 30%);
     z-index: +1;
     width: auto;
     height: auto;

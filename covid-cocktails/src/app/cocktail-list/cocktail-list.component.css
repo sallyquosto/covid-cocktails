@@ -1,6 +1,6 @@
 img {
-    height: 100px;
-    width: 100px;
+  height: 200px;
+  width: 150px;
 }
 
 .cocktail-list{
@@ -111,6 +111,10 @@ h2 {
       align-items: center;
   }
   @media only screen and (min-width: 768px) {
+    img {
+      height: 300px;
+      width: 250px;
+    }
     .search-again-btn {
       display: flex;
       justify-content: center;
@@ -150,6 +154,11 @@ h2 {
   }
 
   @media only screen and (min-width: 1000px) {
+    img {
+      height: 300px;
+      width: 250px;
+    }
+    
     .popup-boxes {
       position: fixed;
       left: 50%;
